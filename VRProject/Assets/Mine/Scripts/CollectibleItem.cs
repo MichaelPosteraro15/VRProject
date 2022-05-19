@@ -7,6 +7,7 @@ public class CollectibleItem : MonoBehaviour
     //nome dell'oggetto
     [SerializeField] private string itemName;
 
+    //quando siamo sull'oggetto
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CharacterController>())

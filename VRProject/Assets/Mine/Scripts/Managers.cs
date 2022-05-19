@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//i managers sono richiesti obligatoriamente
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(InventoryManager))]
 
@@ -11,6 +12,8 @@ public class Managers : MonoBehaviour
     public static InventoryManager Inventory { get; private set; }
     private List<IGameManager> _startSequence;
 
+    //awake è un metodo fornito da MonoBehaviour, eseguito ancor prima di start
+    //awake avvia tutti i manager eli aggiunge alla lista(IGameManager) e le courotine
     void Awake()
     {
         Player = GetComponent<PlayerManager>();

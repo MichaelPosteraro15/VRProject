@@ -4,7 +4,10 @@ using System.Collections.Generic;
 public class InventoryManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus status { get; private set; }
+    //mappa in cui mettiamo gli oggetti che abbiamo associando loro la quantita 
     private Dictionary<string, int> _items;
+    
+    //inizializzazione inventario
     public void Startup()
     {
         Debug.Log("Inventory manager starting...");
@@ -23,14 +26,16 @@ public class InventoryManager : MonoBehaviour, IGameManager
         Debug.Log(itemDisplay);
     }
 
+    //aggiungiamo oggetto al nostro inventario
     public void AddItem(string name)
     {
+        //se l'elemente è gia presente nell'inventario semplicemente aggiungiamo una quantità
         if (_items.ContainsKey(name))
         {
             _items[name] += 1;
         }
         else
-        {
+        {   //se non è presente lo inseriamo e poniamo la sua quantita =1
             _items[name] = 1;
         }
         DisplayItems();
@@ -53,13 +58,14 @@ public class InventoryManager : MonoBehaviour, IGameManager
     }
 
 
+    //ovviamente quando consumiamo un elemento la quantità diminusce 
     public void ConsumeItem(string name)
     {
         if (_items.ContainsKey(name))
         {
             _items[name]--;
             if (_items[name] == 0)
-            {
+            {   //se la quantità è 0 allora rimuoviamo l'oggetto dall'inventario
                 _items.Remove(name);
             }
         }
