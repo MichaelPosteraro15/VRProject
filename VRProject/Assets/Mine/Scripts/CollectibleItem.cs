@@ -6,13 +6,20 @@ public class CollectibleItem : MonoBehaviour
 {
     //nome dell'oggetto
     [SerializeField] private string itemName;
+    private bool anim;
+    public float speed = 1;
+
+
+
+
+
 
     //quando siamo sull'oggetto
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CharacterController>())
         {
-            //prendiamo l'oggetto
+           
             Debug.Log("Item collected");
             //aggiungiamo l'elemento nell'inventario
             Managers.Inventory.AddItem(itemName);
@@ -23,6 +30,35 @@ public class CollectibleItem : MonoBehaviour
 
     }
 
-   
+    private void Start()
+    {
+       StartCoroutine( anima());
+    }
+
+    private void Update()
+    {
+        if (anim)
+        {
+            transform.position = transform.position + new Vector3(0,speed*Time.deltaTime,0);
+
+        }
+        else
+        {
+            transform.position = transform.position - new Vector3(0, speed * Time.deltaTime, 0);
+
+        }
+    }
+
+    IEnumerator anima()
+    {
+        while (gameObject.activeSelf)
+        {
+            yield return new WaitForSeconds(0.4f);
+            anim = !anim;
+
+        }
+    }
+
+
 
 }
