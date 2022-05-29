@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 4be6bc3dde0a54f40b39e1cf4c23ce51, type: 2}
 --- !u!4 &8563219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
@@ -138,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -213,7 +217,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &19113248
@@ -311,7 +315,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &30979684
@@ -419,7 +423,7 @@ GameObject:
   m_Name: muro2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &90457455
@@ -517,7 +521,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &99676444
@@ -615,6 +619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CeilingLights_03_snaps001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1118735592072640, guid: 4231048744ce2ba41a406957740cf383, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4346904993883318, guid: 4231048744ce2ba41a406957740cf383, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -683,6 +691,10 @@ PrefabInstance:
     - target: {fileID: 1118735592072640, guid: 4231048744ce2ba41a406957740cf383, type: 3}
       propertyPath: m_Name
       value: CeilingLights_03_snaps001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118735592072640, guid: 4231048744ce2ba41a406957740cf383, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4346904993883318, guid: 4231048744ce2ba41a406957740cf383, type: 3}
       propertyPath: m_RootOrder
@@ -758,6 +770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -827,6 +843,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC_Set
       objectReference: {fileID: 0}
+    - target: {fileID: 366013302418820549, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236861906628142348, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871405518340804129, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3786402053386643545, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -883,6 +911,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283577463272832106, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171854865864400670, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772998762987940240, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129639798935385023, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
 --- !u!1 &252636492
@@ -901,7 +949,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &252636493
@@ -999,8 +1047,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &268057505
 BoxCollider:
@@ -1096,7 +1144,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &301565957
@@ -1189,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1257,6 +1309,10 @@ PrefabInstance:
     - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
@@ -1332,7 +1388,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &377396763
@@ -1425,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1499,7 +1559,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &446284883
@@ -1597,7 +1657,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &498175511
@@ -1679,6 +1739,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498175510}
   m_Mesh: {fileID: 4300000, guid: 3e8ab2fed2396ac4cbbdbc1f3b74594a, type: 2}
+--- !u!1 &516042984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516042985}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516042985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516042984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.667599, y: 0, z: 1.3805753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &603515402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,6 +1780,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -1764,7 +1859,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &604430060
@@ -1857,6 +1952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop_01_snaps001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1931,7 +2030,7 @@ GameObject:
   m_Name: 'muro '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &629107301
@@ -2024,6 +2123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CeilingLights_03_snaps001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1118735592072640, guid: 4231048744ce2ba41a406957740cf383, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4346904993883318, guid: 4231048744ce2ba41a406957740cf383, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2098,7 +2201,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &644108290
@@ -2272,7 +2375,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &710122729 stripped
 Transform:
@@ -2289,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
@@ -2369,7 +2476,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &800502937
@@ -2462,6 +2569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2533,7 +2644,7 @@ GameObject:
   m_Name: Gruppo di tavoli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &825339092
@@ -2572,7 +2683,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &849036474
@@ -2670,8 +2781,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &884285970
 BoxCollider:
@@ -2762,6 +2873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2830,6 +2945,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -2915,7 +3034,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &996523480
@@ -3013,7 +3132,7 @@ GameObject:
   m_Name: muro2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1038395756
@@ -3116,7 +3235,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1105145070
@@ -3214,6 +3333,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC_Set (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 366013302418820549, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236861906628142348, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871405518340804129, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3786402053386643545, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3270,6 +3401,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283577463272832106, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171854865864400670, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772998762987940240, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129639798935385023, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
 --- !u!1 &1176579235
@@ -3285,7 +3436,7 @@ GameObject:
   m_Name: Gruppo di tavoli (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1176579236
@@ -3327,7 +3478,7 @@ GameObject:
   m_Name: Ufficio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1277817077
@@ -3385,6 +3536,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -3460,7 +3615,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1316943620
@@ -3553,6 +3708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3627,7 +3786,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1377567064
@@ -3720,6 +3879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3791,7 +3954,7 @@ GameObject:
   m_Name: Gruppo di tavoli (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1474612270
@@ -3825,6 +3988,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -3895,6 +4062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3964,6 +4135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Printer01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1943362575408994, guid: 91449bd0e8b9dce41803f9c79a993462, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4420211815902802, guid: 91449bd0e8b9dce41803f9c79a993462, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4032,6 +4207,10 @@ PrefabInstance:
     - target: {fileID: 1590216482022034, guid: af66cb781f2abe44abe97b567b10153a, type: 3}
       propertyPath: m_Name
       value: Desklamp_01_snaps001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590216482022034, guid: af66cb781f2abe44abe97b567b10153a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4980746487900392, guid: af66cb781f2abe44abe97b567b10153a, type: 3}
       propertyPath: m_RootOrder
@@ -4104,7 +4283,7 @@ GameObject:
   m_Name: Gruppo di tavoli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1567512796
@@ -4128,6 +4307,141 @@ Transform:
   m_Father: {fileID: 825339092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1585628863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585628869}
+  - component: {fileID: 1585628868}
+  - component: {fileID: 1585628867}
+  - component: {fileID: 1585628866}
+  - component: {fileID: 1585628865}
+  - component: {fileID: 1585628864}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1585628864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a3c544e595edc4d8b977ba31bf7891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 516042985}
+--- !u!195 &1585628865
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5000001
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &1585628866
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1585628867
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1585628868
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1585628869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8891689, y: 1.95, z: -31.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608845191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,7 +4458,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1608845192
@@ -4237,6 +4551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerDesk_01_snaps001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1479674542863872, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4037808199842474, guid: 1311ead9e03725440bcd145a4ddd5518, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4316,7 +4634,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1795893287
@@ -4409,6 +4727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabinet_01_snaps001
       objectReference: {fileID: 0}
+    - target: {fileID: 1514666194077504, guid: 14e4e479b0ada4d49bfe66d6f080bb7c, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4090742931207612, guid: 14e4e479b0ada4d49bfe66d6f080bb7c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4483,7 +4805,7 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1920908096
@@ -4581,6 +4903,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC_Set (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 366013302418820549, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236861906628142348, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871405518340804129, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3786402053386643545, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4637,6 +4971,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283577463272832106, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171854865864400670, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772998762987940240, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129639798935385023, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
 --- !u!4 &2016577557 stripped
@@ -4660,7 +5014,7 @@ GameObject:
   m_Name: muro2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &2023754262
@@ -4760,7 +5114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5892488452617091304, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5892488452617091304, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4820,7 +5174,7 @@ GameObject:
   m_Name: muro2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &2112620645
@@ -4907,104 +5261,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
   m_PrefabInstance: {fileID: 1479222778}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2136825332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2136825336}
-  - component: {fileID: 2136825335}
-  - component: {fileID: 2136825334}
-  - component: {fileID: 2136825333}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &2136825333
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136825332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2136825334
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136825332}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 55f46fb96c2c4e64881b2619607cd4a5, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2136825335
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136825332}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2136825336
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136825332}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.22, y: 1.01, z: 4.9}
-  m_LocalScale: {x: 1.1359513, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2142908206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5015,6 +5271,10 @@ PrefabInstance:
     - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_Name
       value: Laptop_01_snaps001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163334601776374, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4811157832504852, guid: 88cbb557f01af264c8417bbd28ff33c4, type: 3}
       propertyPath: m_RootOrder
@@ -5094,6 +5354,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146476070718883820, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 146476070718883820, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 603546889137076369, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5138,6 +5406,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1061261794524180421, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061261794524180421, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833667754327861944, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833667754327861944, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2976857394172202363, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
       propertyPath: m_Name
       value: Level
@@ -5154,9 +5438,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8621dfcb3dbf229428e45425021e0875, type: 2}
+    - target: {fileID: 5500678289717876813, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500678289717876813, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7529509479770071798, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739824097234164946, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739824097234164946, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8842631824658351667, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697937a14273f0d4e928ac322ff084c6, type: 3}
@@ -5242,6 +5546,6 @@ GameObject:
   m_Name: Neo_Wall_snaps001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
