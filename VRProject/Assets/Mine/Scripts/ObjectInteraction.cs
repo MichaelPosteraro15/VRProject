@@ -8,6 +8,9 @@ public class ObjectInteraction : MonoBehaviour
 {
     [SerializeField] private Text timerLabel;
     [SerializeField] private Text deviceLabel;
+    [SerializeField] private Text phaseLabel;
+    [SerializeField] private Text passwordLabel;
+
     public string password;
     public string device;
 
@@ -54,12 +57,13 @@ public class ObjectInteraction : MonoBehaviour
             //Setto la variabile che mi dice se sto tenendo premuto a false.
             //Setto la variabile che mi dice se sono in fase di hacking a true.
             if(isDragged == true){ 
-                Debug.Log("Hacking of " + device + " started.");
                 time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
                 startTime = -1;
                 startTime = UnityEngine.Time.time;
                 isDragged = false;
                 isHacking = true;
+                phaseLabel.text = "Hacking...";
+                phaseLabel.color = Color.green;
             }
             //Richiamo la funzione che mi simula l'hacking del device.
             hacking();
@@ -68,9 +72,10 @@ public class ObjectInteraction : MonoBehaviour
 
     //Se faccio click sul device cambio la label del device che voglio hackerare e poi setto a true la variabile che mi dice che ho selezionato un device.
     void OnMouseDown(){
-        Debug.Log("Tryng to connect with: " + device + ".");
         deviceLabel.text = device;
         isClicked = true;
+        phaseLabel.text = "Connection....";
+        phaseLabel.color = Color.yellow;
     }
 
     //Funzione che mi simula la fase di hacking
@@ -80,11 +85,12 @@ public class ObjectInteraction : MonoBehaviour
 
         //Superati i 20 secondi vuol dire che l'hacking é andato a buon fine e quindi viene restituita la password del device.
         if(seconds > 20){
-            Debug.Log("Hacking of " + device + " completed." + " Password: " + password + ".");
             isHacking = false;
             startTime = -1;
+            phaseLabel.text = "COMPLETE";
+            passwordLabel.text = "Password: " + password;
+            phaseLabel.color = Color.red;
         }
     }
-
 
 }
