@@ -6,22 +6,27 @@ using UnityEngine.UI;
 
 public class ObjectInteraction : MonoBehaviour
 {
+    //Sono le variabili che mi servono per gestire la label della UI.
     [SerializeField] private Text timerLabel;
     [SerializeField] private Text deviceLabel;
     [SerializeField] private Text phaseLabel;
     [SerializeField] private Text passwordLabel;
 
-    public string password;
-    public string device;
+    //Il campo che viene settato nell'editor e che é diverso per ogni dispositivo.
+    //Il primo campo serve per settare la password, il secondo il nome del dispositivo e il terzo serve per dire se il dispositivo é hackerabile o meno.
+    public string password;     
+    public string device;       
+    public bool isHackerable;
 
+    //Variabili utili per il timer.
     private float time = 0;
     private float startTime = -1;
     private float seconds = 0;
     
     private bool isClicked = false; //Variabile che mi dice se ho cliccato il device.
     private bool isDragged = false; //Variabile che mi dice se sto tenendo premuto sul device.
-    private bool isHacking = false; //Variabile che mi dice se sto hackerando il device.
-
+    private static bool isHacking = false; //Variabile che mi dice se sto hackerando il device.
+    
     // Start is called before the first frame update
     void Start()
     {}
@@ -56,6 +61,7 @@ public class ObjectInteraction : MonoBehaviour
             //La prima volta che entro faccio ripartire il tempo. Questa volta la durata dell'operazione é 20 secondi.
             //Setto la variabile che mi dice se sto tenendo premuto a false.
             //Setto la variabile che mi dice se sono in fase di hacking a true.
+            //Setto anche la label che mi dice in che stato sono.
             if(isDragged == true){ 
                 time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
                 startTime = -1;
@@ -71,11 +77,23 @@ public class ObjectInteraction : MonoBehaviour
     }
 
     //Se faccio click sul device cambio la label del device che voglio hackerare e poi setto a true la variabile che mi dice che ho selezionato un device.
+    //Setto anche le label della UI del pc.
     void OnMouseDown(){
-        deviceLabel.text = device;
-        isClicked = true;
-        phaseLabel.text = "Connection....";
-        phaseLabel.color = Color.yellow;
+        if(isHacking == false){
+            if(isHackerable == true){
+                isClicked = true;
+                deviceLabel.text = device;
+                passwordLabel.text = "Password: ----";
+                phaseLabel.text = "Connection....";
+                phaseLabel.color = Color.yellow;
+            }
+            else{
+                phaseLabel.text = "DENIED";
+            }
+        }
+        else{
+            Debug.Log("You can't.");
+        }
     }
 
     //Funzione che mi simula la fase di hacking
@@ -84,6 +102,7 @@ public class ObjectInteraction : MonoBehaviour
         timerLabel.text = string.Format ("{0:00}", seconds);
 
         //Superati i 20 secondi vuol dire che l'hacking é andato a buon fine e quindi viene restituita la password del device.
+        //Setto anche le label che mi dicono la fare e la password del device hackerato.
         if(seconds > 20){
             isHacking = false;
             startTime = -1;
@@ -92,5 +111,4 @@ public class ObjectInteraction : MonoBehaviour
             phaseLabel.color = Color.red;
         }
     }
-
 }
