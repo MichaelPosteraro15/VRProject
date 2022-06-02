@@ -269,6 +269,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5f927682928f9f4c89f2b971e51f3d8, type: 3}
+--- !u!1 &22448729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1037028607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &22448734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22448729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device18
+  isHackerable: 0
 --- !u!1001 &25676407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,6 +1259,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 179a85f3638585242950428c0a8108c5, type: 3}
+--- !u!1 &431376518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 88510531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &431376523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431376518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device14
+  isHackerable: 0
 --- !u!4 &456479942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4343568555110130, guid: b0b25d39ee8d29546bcaaeb1b217bdaa, type: 3}
@@ -1416,6 +1464,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5211543161590813815, guid: d5f927682928f9f4c89f2b971e51f3d8, type: 3}
   m_PrefabInstance: {fileID: 20129065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &567364166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 627068453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &567364171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567364166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device15
+  isHackerable: 0
 --- !u!1001 &569921411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2134,6 +2206,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e4e479b0ada4d49bfe66d6f080bb7c, type: 3}
+--- !u!114 &845435226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082352159362495975, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
+  m_PrefabInstance: {fileID: 985973266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &850301856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2690,6 +2773,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3975173851955996294, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
   m_PrefabInstance: {fileID: 1598157226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1067836524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1330517535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1067836529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067836524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device16
+  isHackerable: 0
 --- !u!1001 &1093140160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2928,6 +3035,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+--- !u!1 &1130297154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 946530115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1130297159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130297154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1015
+  device: Device20
+  isHackerable: 1
+--- !u!1 &1136995730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1598157226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1136995735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136995730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device19
+  isHackerable: 0
+--- !u!114 &1159099909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082352159738863370, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
+  m_PrefabInstance: {fileID: 985973266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1191917400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3229117168138947905, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
@@ -3012,6 +3178,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4343568555110130, guid: b0b25d39ee8d29546bcaaeb1b217bdaa, type: 3}
   m_PrefabInstance: {fileID: 1262150705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1280579148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195088833612891033, guid: 4889467a986195d4aa51f2677a9f3ff5, type: 3}
+  m_PrefabInstance: {fileID: 734218234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1280579153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280579148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device3
+  isHackerable: 0
 --- !u!1 &1297923231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1297923232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3113,6 +3303,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1318763143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 2060763339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1318763148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318763143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device7
+  isHackerable: 0
 --- !u!1001 &1330517535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3711,11 +3925,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e70069d36571e41b6fa07f1eeb764b, type: 3}
+--- !u!1 &1535501659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1823223153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535501664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535501659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device6
+  isHackerable: 0
 --- !u!4 &1561195284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3975173851955996294, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
   m_PrefabInstance: {fileID: 1037028607}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1590060568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195088834321341535, guid: 4889467a986195d4aa51f2677a9f3ff5, type: 3}
+  m_PrefabInstance: {fileID: 626375619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590060573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590060568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device10
+  isHackerable: 0
 --- !u!1001 &1592194392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4143,6 +4405,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1683271375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+  m_PrefabInstance: {fileID: 646794515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1683271381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683271375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device12
+  isHackerable: 0
 --- !u!1001 &1726227365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4269,6 +4555,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1750816388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1859910762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1750816393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750816388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device17
+  isHackerable: 0
 --- !u!4 &1758324974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315302312925223385, guid: a15c4b10370dd354a8d5d0fb6d99e482, type: 3}
@@ -4420,6 +4730,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
+--- !u!1 &1806191353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195088834321341535, guid: 4889467a986195d4aa51f2677a9f3ff5, type: 3}
+  m_PrefabInstance: {fileID: 734218234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1806191358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806191353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device4
+  isHackerable: 0
 --- !u!1001 &1823223153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4688,6 +5022,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0b25d39ee8d29546bcaaeb1b217bdaa, type: 3}
+--- !u!114 &1865676456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082352159071699001, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
+  m_PrefabInstance: {fileID: 985973266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867321049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +5081,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1881417347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+  m_PrefabInstance: {fileID: 1093140160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881417353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881417347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device13
+  isHackerable: 0
 --- !u!1001 &1913479529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4809,11 +5178,118 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eb59992ccf63a945806038868d7263a, type: 3}
+--- !u!114 &1917662221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082352160009874078, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
+  m_PrefabInstance: {fileID: 985973266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1950743594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 242873516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1950743599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950743594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1510
+  device: Device1
+  isHackerable: 1
+--- !u!1 &1960432952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195088833612891033, guid: 4889467a986195d4aa51f2677a9f3ff5, type: 3}
+  m_PrefabInstance: {fileID: 626375619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960432957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960432952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device9
+  isHackerable: 0
+--- !u!1 &2004413604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7355915854892694272, guid: b33edaa44f749664aba2659b5c5a00aa, type: 3}
+  m_PrefabInstance: {fileID: 904307668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2004413610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004413604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device2
+  isHackerable: 0
 --- !u!4 &2028780570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315302312925223385, guid: a15c4b10370dd354a8d5d0fb6d99e482, type: 3}
   m_PrefabInstance: {fileID: 147290770}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2038218023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3871941999459348572, guid: f1a6eb82d2368ea43b3baab7edb33cfb, type: 3}
+  m_PrefabInstance: {fileID: 850301856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2038218029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038218023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device11
+  isHackerable: 0
 --- !u!4 &2038939924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7992635672943440774, guid: 02ecab1fef1aaf9409f103d7ef9ac72a, type: 3}
@@ -5054,10 +5530,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerLabel: {fileID: 1040843271}
-  deviceLabel: {fileID: 1660992721}
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
   password: 1234
-  device: Device1
+  device: Device8
+  isHackerable: 1
 --- !u!4 &2092278289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7094443401850242932, guid: beb371209ab6caa45be5c7b336aaa6f9, type: 3}
@@ -5068,6 +5547,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4090742931207612, guid: 14e4e479b0ada4d49bfe66d6f080bb7c, type: 3}
   m_PrefabInstance: {fileID: 829719341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2137995759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5901166447641755951, guid: 570a500ac6f77c74082410d714e0dc8a, type: 3}
+  m_PrefabInstance: {fileID: 1393761728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137995764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137995759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795ff86c9cfe9f46bc2f51a62e76241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 1917662221}
+  deviceLabel: {fileID: 845435226}
+  phaseLabel: {fileID: 1159099909}
+  passwordLabel: {fileID: 1865676456}
+  password: 1
+  device: Device5
+  isHackerable: 0
 --- !u!1001 &5536051793801893518
 PrefabInstance:
   m_ObjectHideFlags: 0
