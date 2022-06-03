@@ -13,7 +13,7 @@ public class Managers : MonoBehaviour
     private List<IGameManager> _startSequence;
 
     //awake è un metodo fornito da MonoBehaviour, eseguito ancor prima di start
-    //awake avvia tutti i manager eli aggiunge alla lista(IGameManager) e le courotine
+    //awake avvia tutti i manager e li aggiunge alla lista(IGameManager) e le courotine
     void Awake()
     {
         Player = GetComponent<PlayerManager>();

@@ -23,7 +23,6 @@ public class PlayerCharacter : MonoBehaviour
     {//assegnamo i valori grazie al Manager
         _health = Managers.Player.health;
         healthBar.maxValue = Managers.Player.maxHealth;
-        healthPackValue = Managers.Player.healthPackValue;
 
         barValueDamage = Managers.Player.barValueDamage;
         healthBarBackground = healthBar.GetComponentInChildren<Image>(); //con GetComponentInChildren ci andiamo a prendere il component image figlio
@@ -33,18 +32,6 @@ public class PlayerCharacter : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.H) && Managers.Inventory.GetItemCount("health") != 0)
-        {
-            _health += healthPackValue;
-            healthBar.value += (barValueDamage * healthPackValue);
-
-            if (_health > Managers.Player.health)
-            {
-                _health = Managers.Player.health;
-                healthBar.value = healthBar.maxValue;
-            }
-            Managers.Inventory.ConsumeItem("health");
-        }
 
         if (_health <= 0)
         {
