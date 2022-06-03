@@ -6,10 +6,10 @@ public class CollectibleItem : MonoBehaviour
 {
     //nome dell'oggetto
     [SerializeField] private string itemName;
+    [SerializeField] private bool okAnimation;
 
     //piccola animazione per gli oggetti che si trovano nell mappa
     private bool anim;
-    public float speed = 1;
 
 
 
@@ -35,21 +35,24 @@ public class CollectibleItem : MonoBehaviour
     private void Start()
     {
         //avvia la coroutine che anima gli oggetti
-       StartCoroutine( anima());
+        if (okAnimation)
+        {
+            StartCoroutine(anima());
+        }
     }
 
     private void Update()
     {
         //se true va verso l'alto
-        if (anim)
+        if (anim && okAnimation)
         {
-            transform.position = transform.position + new Vector3(0,speed*Time.deltaTime,0);
+            transform.position = transform.position + new Vector3(0,1*Time.deltaTime,0);
 
         }
         //se false va verso il basso
-        else
+        else if(!anim && okAnimation)
         {
-            transform.position = transform.position - new Vector3(0, speed * Time.deltaTime, 0);
+            transform.position = transform.position - new Vector3(0, 1 * Time.deltaTime, 0);
 
         }
     }
