@@ -17,14 +17,14 @@ public class Switch : MonoBehaviour
     {
         Debug.Log(gameObject.transform.childCount);
 
-        bool change = false;
+        bool switch_ = false;
 
         //scorriamo con la rotellina del mouse tutti gli oggetti che abbiamo a disposizione
         if (Input.GetAxis("Mouse ScrollWheel")>0) // forward
         {
             //aumentiamo il contatore dell'oggetto selezionato
             selectOb++;
-            change = true;
+            switch_ = true;
 
             //se il contatore è arrivato all'ultimo oggetto disponibile ritorna al primo
             if (selectOb == gameObject.transform.childCount)
@@ -35,7 +35,7 @@ public class Switch : MonoBehaviour
         else if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
              selectOb--;
-             change = true;
+            switch_ = true;
 
             //se il contatore è arrivato all'ultimo oggetto disponibile ritorna al l'ultimo
             if (selectOb == -1)
@@ -45,7 +45,8 @@ public class Switch : MonoBehaviour
 
         }
 
-        if (change)
+        //se si verifica l'evento del mouse allora vuol didre che bisognerà cambiare oggetto
+        if (switch_)
         {
             SelectObject();
         }
