@@ -27,6 +27,8 @@ public class MouseLook : MonoBehaviour
         if (body != null){
             body.freezeRotation = true;
         }
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     // Update is called once per frame
