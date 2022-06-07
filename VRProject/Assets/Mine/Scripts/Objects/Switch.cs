@@ -6,6 +6,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public int selectOb = 0;
+    public int numOb;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gameObject.transform.childCount);
+        numOb = gameObject.transform.childCount;
 
         bool switch_ = false;
 
@@ -45,23 +46,41 @@ public class Switch : MonoBehaviour
 
         }
 
-        //se si verifica l'evento del mouse allora vuol didre che bisognerà cambiare oggetto
+        //scorro tutti i figli 
+        for (int i=1;i<=numOb;i++)
+        {
+            //se si preme un tasto che corrisponde ad un figlio valido
+            if (Input.GetKeyDown(i.ToString()))
+            {
+                //seleziono l'indice corrispondente al tasto selezionato
+                selectOb = i-1;
+                
+                //prendo l'oggetto
+                SelectObject();
+            }
+        }
+        
+
+        //se si verifica l'evento del mouse allora vuol dire che bisognerà cambiare oggetto
         if (switch_)
         {
             SelectObject();
         }
         
 
-
+        
 
     }
 
+    //metodo che prende l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
     private void SelectObject()
     {
         foreach (Transform ob in transform)
-        {
+        {   //rende tutti gli oggetti non attivi
             ob.gameObject.SetActive(false);
         }
+
+        //si prende il figlio selezionato dal contatore e lo rende attivo
         transform.GetChild(selectOb).gameObject.SetActive(true);
 
     }
