@@ -7,6 +7,8 @@ public class Switch : MonoBehaviour
 {
     //indice che ci permette di scorrere i figli dell'oggetto a cui è associato tale script
     public int selectOb = 0;
+
+    
     public int numOb;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //gameObject.transform.childCount mi permette di sapere quanti figli ci sono all'interno dell'oggetto (size)
         numOb = gameObject.transform.childCount;
 
         bool switch_ = false;
