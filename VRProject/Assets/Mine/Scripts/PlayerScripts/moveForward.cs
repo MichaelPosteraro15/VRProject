@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class SimpleMovement : MonoBehaviour
+public class moveForward : MonoBehaviour
 {
-    public Transform goal;
+    public float speed = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        transform.Translate(0, 0, speed);
     }
 }
