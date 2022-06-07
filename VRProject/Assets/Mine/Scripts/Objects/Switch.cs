@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
+    //indice che ci permette di scorrere i figli dell'oggetto a cui è associato tale script
     public int selectOb = 0;
     public int numOb;
     // Start is called before the first frame update
