@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;
 
+	//array di suoni che possiamo usare quando vogliamo tramite tale classe
 	public Sound[] sounds;
 
 	void Start ()
@@ -28,9 +29,10 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	//quando chiamiamo play si ascolta il soud che gli passiamo(che deve essere nell'array)
 	public void Play (string sound)
 	{
-
+		//trova il suono nell'array e lo riproduce
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Play();
 	}
