@@ -42,6 +42,8 @@ public class SimpleShoot : MonoBehaviour
         {
             //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
+           
+
         }
     }
 
@@ -92,6 +94,8 @@ public class SimpleShoot : MonoBehaviour
 
     private void shootImp()
     {
+        //parte clip audio fire
+        AudioManager.instance.Play("Fire");
         RaycastHit hit;
         //se abbiamo colpito un oggetto
         if (Physics.Raycast(cam.position, cam.forward, out hit, range))
