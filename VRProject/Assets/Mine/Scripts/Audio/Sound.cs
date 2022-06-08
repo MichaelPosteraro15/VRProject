@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
+
+//classe che ci permette di gestire una clipAudio
 public class Sound {
 
 	public string name;
