@@ -11,8 +11,10 @@ public class SimpleShoot : MonoBehaviour
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
     public Transform cam;
-    public float range = 20;
+    
+    public float distance = 25;//distanza da cui puo colpire
     public float impact = 150;
+    public GameObject impactEffect;
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
@@ -98,14 +100,17 @@ public class SimpleShoot : MonoBehaviour
         AudioManager.instance.Play("Fire");
         RaycastHit hit;
         //se abbiamo colpito un oggetto
-        if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+        if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
         {
             if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impact);
             }
 
-
+            //rotazioni 
+            Quaternion impactR = Quaternion.LookRotation(hit.normal);
+            GameObject _impact= Instantiate(impactEffect, hit.point, impactR);
+            Destroy(_impact,4);
         }
     }
 
