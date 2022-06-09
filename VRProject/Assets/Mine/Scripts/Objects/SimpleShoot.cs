@@ -110,6 +110,8 @@ public class SimpleShoot : MonoBehaviour
             //rotazioni 
             Quaternion impactR = Quaternion.LookRotation(hit.normal);
             GameObject _impact= Instantiate(impactEffect, hit.point, impactR);
+            //mettiamo come genitore l'oggetto colpito
+            _impact.transform.parent = hit.transform;
             Destroy(_impact,4);
         }
     }
