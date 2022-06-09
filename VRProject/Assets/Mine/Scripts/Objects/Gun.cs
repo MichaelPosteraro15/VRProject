@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
 {
     //associamo la camera all'oggetto
     public Transform cam;
-    public float range = 20;
+    public float distance = 20;
     public float impact = 150;
     public int fireRate = 10;
     public float nextTime = 0;
@@ -38,7 +38,7 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         effect.Play();
         //se abbiamo colpito un oggetto
-        if(Physics.Raycast(cam.position,cam.forward,out hit,range))
+        if(Physics.Raycast(cam.position,cam.forward,out hit, distance))
         {
             if (hit.rigidbody != null)
             {
