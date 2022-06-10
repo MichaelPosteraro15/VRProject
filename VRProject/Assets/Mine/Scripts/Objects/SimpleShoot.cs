@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -11,10 +12,14 @@ public class SimpleShoot : MonoBehaviour
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
     public Transform cam;
+
+    public int maxAmmo = 20;
+    public int currentAmmo;
     
     public float distance = 25;//distanza da cui puo colpire
     public float impact = 150;
     public GameObject impactEffect;
+ 
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
@@ -29,6 +34,8 @@ public class SimpleShoot : MonoBehaviour
 
     void Start()
     {
+        
+        currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -38,12 +45,22 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
+        
+
         //tasto 1 mouse
         //If you want a different input, change it here
         if (Input.GetButtonDown("Fire1"))
         {
-            //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
+            if (currentAmmo > 0)
+            {
+                updateAmmo();
+                
+                //Calls animation on the gun that has the relevant animation events that will fire
+                gunAnimator.SetTrigger("Fire");
+                shootImp();
+
+            }
+          
            
 
         }
@@ -68,7 +85,7 @@ public class SimpleShoot : MonoBehaviour
         if (!bulletPrefab)
         { return; }
 
-        shootImp();
+       
         // Create a bullet and add force on it in direction of the barrel
         Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
 
@@ -98,6 +115,9 @@ public class SimpleShoot : MonoBehaviour
     {
         //parte clip audio fire
         AudioManager.instance.Play("Fire");
+
+        
+
         RaycastHit hit;
         //se abbiamo colpito un oggetto
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
@@ -115,5 +135,13 @@ public class SimpleShoot : MonoBehaviour
             Destroy(_impact,4);
         }
     }
+
+    //le munizioni diminuiscono
+    private void updateAmmo()
+    {
+        currentAmmo--;
+    }
+
+ 
 
 }
