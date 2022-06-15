@@ -7,7 +7,7 @@ public class Grenade : MonoBehaviour
     public ParticleSystem effect;
     public float radius = 30f;
     public Transform cam;
-    private float range = 30f;
+    private float range = 1000f;
     public int maxGrenade = 5;
     public int currentGrenade;
     public GameObject grenade;
@@ -44,9 +44,16 @@ public class Grenade : MonoBehaviour
         AudioManager.instance.Play("gas leak");
         currentGrenade--;
         Debug.Log("lancia");
-        GameObject _grenade = Instantiate(grenade, transform.position, transform.rotation);
-        _grenade.GetComponent<Rigidbody>().AddForce(transform.forward *range,ForceMode.Impulse);
 
+        RaycastHit hit;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            GameObject _grenade = Instantiate(grenade, transform.position, transform.rotation);
+            _grenade.GetComponent<Rigidbody>().AddForceAtPosition(ray.direction * range, hit.point, ForceMode.Force);
+        }
 
 
         
