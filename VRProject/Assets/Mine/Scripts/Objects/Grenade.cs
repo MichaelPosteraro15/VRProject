@@ -11,7 +11,7 @@ public class Grenade : MonoBehaviour
     public int maxGrenade = 5;
     public int currentGrenade;
     public GameObject grenade;
-   
+    public float distance = 500;
 
    // public GameObject grenade;
 
@@ -49,7 +49,7 @@ public class Grenade : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,distance))
         {
             GameObject _grenade = Instantiate(grenade, transform.position, transform.rotation);
             _grenade.GetComponent<Rigidbody>().AddForceAtPosition(ray.direction * range, hit.point, ForceMode.Force);
