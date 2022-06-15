@@ -5,8 +5,8 @@ using UnityEngine;
 public class Crowbar : MonoBehaviour
 {
     public Transform cam;
-    public float distance = 2;
-    public float impact = 80;
+    public float distance = 5;
+    public float impact = 120;
     public float damage = 0;
 
 
