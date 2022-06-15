@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knife : MonoBehaviour
-{ 
-
+public class Crowbar : MonoBehaviour
+{
     public Transform cam;
     public float distance = 2;
     public float impact = 80;
     public float damage = 0;
-   
-    
+
 
     void Start()
     { }
@@ -19,8 +17,7 @@ public class Knife : MonoBehaviour
     void Update()
     {
 
-        //quando si verifica l'evento richiamiamo il metodo Fire che ci permette di colpire
-        if (Input.GetMouseButtonUp(0) )
+        if (Input.GetMouseButtonUp(0))
         {
             Shoot();
             Debug.Log("colpisce");
@@ -32,19 +29,23 @@ public class Knife : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        AudioManager.instance.Play("knife");
+        
 
 
-        //se abbiamo colpito un oggetto
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
         {
             if (hit.rigidbody != null)
             {
+                AudioManager.instance.Play("crowbarShoot");
+
                 hit.rigidbody.AddForce(-hit.normal * impact);
+                return;
             }
 
 
         }
+
+        AudioManager.instance.Play("airHit");
     }
 
 
