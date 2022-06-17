@@ -19,7 +19,8 @@ public class SimpleShoot : MonoBehaviour
     public float distance = 25;//distanza da cui puo colpire
     public float impact = 150;
     public GameObject impactEffect;
- 
+    public Animator animator;
+
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
@@ -45,7 +46,8 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
-        
+        animator.SetBool("GunShoot", false);
+
 
         //tasto 1 mouse
         //If you want a different input, change it here
@@ -111,12 +113,15 @@ public class SimpleShoot : MonoBehaviour
     }
 
 
+    //quando avviene il colpo 
     private void shootImp()
     {
         //parte clip audio fire
         AudioManager.instance.Play("Fire");
+        //settiamo a true il bool che riguarda l'animazione della pistola   
+        animator.SetBool("GunShoot", true);
 
-        
+
 
         RaycastHit hit;
         //se abbiamo colpito un oggetto

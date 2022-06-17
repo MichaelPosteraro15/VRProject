@@ -10,6 +10,8 @@ public class FPSInput : MonoBehaviour
     public float gravity = -9.8f;
     private CharacterController _charController;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,22 @@ public class FPSInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+        animator.SetBool("Run", false);
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
 
-        
+        //animazione camminata, semplicemente settiamo la variabile bool dichiarata nell animator
+        if (deltaX != 0 || deltaZ != 0)
+        {
+            animator.SetBool("Run", true);
+
+        }
+
+
+
+
         movement = Vector3.ClampMagnitude(movement, speed);
         movement.y = gravity;
 
