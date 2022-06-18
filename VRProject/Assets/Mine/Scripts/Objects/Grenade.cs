@@ -12,6 +12,7 @@ public class Grenade : MonoBehaviour
     public int currentGrenade;
     public GameObject grenade;
     public float distance = 500;
+    public Animator animator;
 
    // public GameObject grenade;
 
@@ -32,18 +33,22 @@ public class Grenade : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             if(currentGrenade>0)
-                launch();
+                _throw();
             
                 
         }
     }
 
-    private void launch()
+    private void _throw()
     {
         effect.Play();
+        animator.Play("ThrowOb");
+
         AudioManager.instance.Play("gas leak");
         currentGrenade--;
         Debug.Log("lancia");
+
+
 
         RaycastHit hit;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);

@@ -8,6 +8,7 @@ public class Crowbar : MonoBehaviour
     public float distance = 5;
     public float impact = 120;
     public float damage = 0;
+    public Animator animator;
 
 
     void Start()
@@ -29,7 +30,8 @@ public class Crowbar : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        
+        animator.Play("knifeShot");
+
 
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))

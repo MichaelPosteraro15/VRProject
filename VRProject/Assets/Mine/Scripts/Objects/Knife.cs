@@ -9,7 +9,7 @@ public class Knife : MonoBehaviour
     public float distance = 2;
     public float impact = 80;
     public float damage = 0;
-   
+    public Animator animator;
     
 
     void Start()
@@ -33,7 +33,7 @@ public class Knife : MonoBehaviour
     {
         RaycastHit hit;
         AudioManager.instance.Play("knife");
-
+        animator.Play("knifeShot");
 
         //se abbiamo colpito un oggetto
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))

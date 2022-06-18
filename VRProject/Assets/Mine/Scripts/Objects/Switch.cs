@@ -7,8 +7,9 @@ public class Switch : MonoBehaviour
 {
     //indice che ci permette di scorrere i figli dell'oggetto a cui è associato tale script
     public int selectOb = 0;
+    public Animator animator;
 
-    
+
     public int numOb;
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,8 @@ public class Switch : MonoBehaviour
     //metodo che prende l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
     private void SelectObject()
     {
+        animator.Play("SwitchObject");
+
         foreach (Transform ob in transform)
         {   //rende tutti gli oggetti non attivi
             ob.gameObject.SetActive(false);
