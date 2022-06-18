@@ -147,6 +147,11 @@ public class SimpleShoot : MonoBehaviour
         currentAmmo--;
     }
 
- 
+    private void rechargeAmmo()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+
 
 }
