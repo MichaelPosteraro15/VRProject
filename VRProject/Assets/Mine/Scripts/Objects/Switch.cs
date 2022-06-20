@@ -8,6 +8,8 @@ public class Switch : MonoBehaviour
     //indice che ci permette di scorrere i figli dell'oggetto a cui è associato tale script
     public int selectOb = 0;
     public Animator animator;
+    public GameObject leftElbow;
+    public Transform rightElbow;
 
 
     public int numOb;
@@ -90,5 +92,19 @@ public class Switch : MonoBehaviour
         //si prende il figlio selezionato dal contatore e lo rende attivo
         transform.GetChild(selectOb).gameObject.SetActive(true);
 
+        
+        string obName = transform.GetChild(selectOb).gameObject.name;
+
+        if (obName == "Empty")
+        {
+
+            //Vector3 newRotation = new Vector3(48.6f, 35.6f, -15.773f);
+            //leftElbow.eulerAngles = newRotation;
+            //Debug.Log(rightElbow.rotation.x);
+        }
+        else
+        {
+
+        }
     }
 }
