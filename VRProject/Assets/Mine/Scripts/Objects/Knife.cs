@@ -10,10 +10,14 @@ public class Knife : MonoBehaviour
     public float impact = 80;
     public float damage = 0;
     public Animator animator;
-    
+
 
     void Start()
-    { }
+    {
+      //  Vector3 newRotation = new Vector3(-8.3f, 35.6f, -15.773f);
+       // leftArm.eulerAngles=newRotation;
+       // leftArm.rotation= Quaternion.Euler(-8.3f, 35.6f, -15.773f);
+    }
 
 
     void Update()
