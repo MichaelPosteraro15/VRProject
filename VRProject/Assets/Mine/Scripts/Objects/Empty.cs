@@ -32,8 +32,8 @@ public class Empty : MonoBehaviour
     private void Shot()
     {
         RaycastHit hit;
-       // AudioManager.instance.Play();
-       // animator.Play();
+        //AudioManager.instance.Play();
+        animator.Play("punch");
 
         //se abbiamo colpito un oggetto
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
