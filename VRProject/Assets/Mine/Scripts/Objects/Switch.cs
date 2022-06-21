@@ -8,8 +8,10 @@ public class Switch : MonoBehaviour
     //indice che ci permette di scorrere i figli dell'oggetto a cui è associato tale script
     public int selectOb = 0;
     public Animator animator;
-    public GameObject leftElbow;
+    public Transform leftElbow;
     public Transform rightElbow;
+    private bool lowL = false;
+    private bool lowD = false;
 
 
     public int numOb;
@@ -98,13 +100,28 @@ public class Switch : MonoBehaviour
         if (obName == "Empty")
         {
 
-            //Vector3 newRotation = new Vector3(48.6f, 35.6f, -15.773f);
-            //leftElbow.eulerAngles = newRotation;
-            //Debug.Log(rightElbow.rotation.x);
+            if (lowL)
+            {
+                leftElbow.eulerAngles = new Vector3(
+                leftElbow.eulerAngles.x+47,
+                leftElbow.eulerAngles.y,
+                leftElbow.eulerAngles.z
+                );
+                lowL = false;
+            }
+            
+            
         }
         else
         {
-
+            if (!lowL)
+            {
+                leftElbow.eulerAngles = new Vector3(
+                 leftElbow.eulerAngles.x - 47,
+                 leftElbow.eulerAngles.y,
+                 leftElbow.eulerAngles.z);
+                 lowL = true;
+            }
         }
     }
 }

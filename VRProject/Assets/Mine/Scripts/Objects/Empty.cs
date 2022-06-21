@@ -15,9 +15,6 @@ public class Empty : MonoBehaviour
     {
 
 
-        //Vector3 newRotation = new Vector3(48.6f, 35.6f, -15.773f);
-        //leftArm.eulerAngles = newRotation;
-        //leftArm.Rotate(48.6f, 35.6f, -15.773f,Space.World);
         
     }
 
