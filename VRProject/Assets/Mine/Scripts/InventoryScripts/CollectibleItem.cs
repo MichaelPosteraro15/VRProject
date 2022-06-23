@@ -13,9 +13,6 @@ public class CollectibleItem : MonoBehaviour
 
 
 
-
-
-
     //quando siamo sull'oggetto
     void OnTriggerEnter(Collider other)
     {

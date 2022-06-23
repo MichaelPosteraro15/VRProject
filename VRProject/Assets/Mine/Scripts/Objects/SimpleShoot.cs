@@ -66,6 +66,12 @@ public class SimpleShoot : MonoBehaviour
            
 
         }
+
+        if (Managers.Inventory.GetItemCount("bullets") != 0)
+        {
+            rechargeAmmo();
+            Managers.Inventory.ConsumeItem("bullets");
+        }
     }
 
 
