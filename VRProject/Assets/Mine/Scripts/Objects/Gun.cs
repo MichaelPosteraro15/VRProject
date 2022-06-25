@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//CLASSE NON USATA
 public class Gun : MonoBehaviour
 {
+    
     //associamo la camera all'oggetto
     public Transform cam;
     public float distance = 20;

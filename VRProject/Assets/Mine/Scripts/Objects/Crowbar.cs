@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crowbar : MonoBehaviour
 {
+
     public Transform cam;
     public float distance = 5;
     public float impact = 120;
@@ -36,10 +37,13 @@ public class Crowbar : MonoBehaviour
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
         {
+            //se ho colpito un oggetto che ha un rigidbody 
             if (hit.rigidbody != null)
             {
+                //parte suono
                 AudioManager.instance.Play("crowbarShoot");
 
+                //accedo all'oggetto colpito e gli applico una forza
                 hit.rigidbody.AddForce(-hit.normal * impact);
                 return;
             }

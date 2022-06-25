@@ -59,7 +59,8 @@ public class SimpleShoot : MonoBehaviour
                 
                 //Calls animation on the gun that has the relevant animation events that will fire
                 gunAnimator.SetTrigger("Fire");
-                shootImp();
+                //metodo che gestisce il colpo
+                _shoot();
 
             }
           
@@ -74,6 +75,37 @@ public class SimpleShoot : MonoBehaviour
         }
     }
 
+
+    //quando avviene il colpo 
+    private void _shoot()
+    {
+        //parte clip audio fire
+        AudioManager.instance.Play("Fire");
+        //settiamo a true il bool che riguarda l'animazione della pistola   
+        animator.SetBool("GunShoot", true);
+
+
+
+        RaycastHit hit;
+        //se abbiamo colpito un oggetto 
+        if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
+        {
+            //se tale oggetto colpito è un rigidBody
+            if (hit.rigidbody != null)
+            {
+                //gli applico una forza
+                hit.rigidbody.AddForce(-hit.normal * impact);
+            }
+
+            //effetto su ciò che è stato colpito
+            Quaternion impactR = Quaternion.LookRotation(hit.normal);
+            GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
+            
+            //mettiamo come genitore l'oggetto colpito
+            _impact.transform.parent = hit.transform;
+            Destroy(_impact, 4);
+        }
+    }
 
     //This function creates the bullet behavior
     void Shoot()
@@ -119,33 +151,6 @@ public class SimpleShoot : MonoBehaviour
     }
 
 
-    //quando avviene il colpo 
-    private void shootImp()
-    {
-        //parte clip audio fire
-        AudioManager.instance.Play("Fire");
-        //settiamo a true il bool che riguarda l'animazione della pistola   
-        animator.SetBool("GunShoot", true);
-
-
-
-        RaycastHit hit;
-        //se abbiamo colpito un oggetto
-        if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
-        {
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impact);
-            }
-
-            //rotazioni 
-            Quaternion impactR = Quaternion.LookRotation(hit.normal);
-            GameObject _impact= Instantiate(impactEffect, hit.point, impactR);
-            //mettiamo come genitore l'oggetto colpito
-            _impact.transform.parent = hit.transform;
-            Destroy(_impact,4);
-        }
-    }
 
     //le munizioni diminuiscono
     private void updateAmmo()
@@ -153,6 +158,7 @@ public class SimpleShoot : MonoBehaviour
         currentAmmo--;
     }
 
+    //ricarico
     private void rechargeAmmo()
     {
         currentAmmo = maxAmmo;

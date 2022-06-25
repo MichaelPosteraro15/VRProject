@@ -53,10 +53,12 @@ public class Grenade : MonoBehaviour
         RaycastHit hit;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
+        //il raycast in questo caso mi serve solo per indirizzare la granata verso la direzione desiderata
         if (Physics.Raycast(ray, out hit,distance))
         {
+            //instanzio una nuova granata
             GameObject _grenade = Instantiate(grenade, transform.position, transform.rotation);
+            //gli applico una forza che lo fa muovere verso la direzione desiderata, simulando il lancio
             _grenade.GetComponent<Rigidbody>().AddForceAtPosition(ray.direction * range, hit.point, ForceMode.Force);
         }
 

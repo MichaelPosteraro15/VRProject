@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour {
 	[Range(0f, 1f)]
 	public static float volume;
 
-	//array di suoni che possiamo usare quando vogliamo tramite tale classe
+	//array di suoni che possiamo usare quando vogliamo,tramite tale classe
 	public Sound[] sounds;
 
 	void Start ()
@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour {
 		s.source.Stop();
 	}
 
+	//set volume
 	public void SetVolume(float v)
     {
 		foreach (Sound s in sounds)

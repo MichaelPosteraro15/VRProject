@@ -27,6 +27,7 @@ public class MouseLook : MonoBehaviour
         if (body != null){
             body.freezeRotation = true;
         }
+        //NASCONDO IL CURSORE DEL MOUSE
         Cursor.lockState = CursorLockMode.Locked;
 
     }

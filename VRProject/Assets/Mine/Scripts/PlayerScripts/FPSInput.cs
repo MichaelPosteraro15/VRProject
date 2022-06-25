@@ -10,6 +10,7 @@ public class FPSInput : MonoBehaviour
     public float gravity = -9.8f;
     private CharacterController _charController;
 
+    //aggiungo un animazione al player, ANIMATOR CONTENUTO IN ARMS
     public Animator animator;
 
     // Start is called before the first frame update
