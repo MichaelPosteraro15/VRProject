@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectOb: 0
+  animator: {fileID: 0}
+  leftElbow: {fileID: 0}
+  rightElbow: {fileID: 0}
+  arms: {fileID: 0}
+  pc: {fileID: 0}
   numOb: 0
 --- !u!1001 &1510117724350577226
 PrefabInstance:
