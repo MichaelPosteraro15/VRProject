@@ -94,7 +94,7 @@ public class Switch : MonoBehaviour
         //si prende il figlio selezionato dal contatore e lo rende attivo
         transform.GetChild(selectOb).gameObject.SetActive(true);
 
-        
+        //in base all'oggetto cambia la posizione delle mani
         string obName = transform.GetChild(selectOb).gameObject.name;
 
         if (obName == "Empty")
