@@ -5,6 +5,9 @@ public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;
 
+	[Range(0f, 1f)]
+	public static float volume;
+
 	//array di suoni che possiamo usare quando vogliamo tramite tale classe
 	public Sound[] sounds;
 
@@ -43,5 +46,13 @@ public class AudioManager : MonoBehaviour {
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Stop();
 	}
+
+	public void SetVolume(float v)
+    {
+		foreach (Sound s in sounds)
+        {
+			s.setVolume(v);
+        }
+    }
 
 }
