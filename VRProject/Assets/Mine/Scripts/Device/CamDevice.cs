@@ -4,20 +4,20 @@ using UnityEngine;
 using System.Timers;
 using UnityEngine.UI;
 
-public class ObjectInteraction : MonoBehaviour
+public class CamDevice : MonoBehaviour
 {
     //Sono le variabili che mi servono per gestire la label della UI.
     [SerializeField] private Text timerLabel;
     [SerializeField] private Text deviceLabel;
-    [SerializeField] private Text phaseLabel;
-    [SerializeField] private Text passwordLabel;
-
+    [SerializeField] private Text messageLabel;
+    [SerializeField] private Slider counterBar;
+    [SerializeField] private GameObject cam;
+    
     //Il campo che viene settato nell'editor e che é diverso per ogni dispositivo.
-    //Il primo campo serve per settare la password, il secondo il nome del dispositivo e il terzo serve per dire se il dispositivo é hackerabile o meno.
-    public string password;     
-    public string device;       
-    public bool isHackerable;
-
+    //Il primo campo serve per settare la password, il secondo il nome del dispositivo e il terzo serve per dire se il dispositivo é hackerabile o meno.  
+    public string device;
+    private int counter = 0;       
+    
     //Variabili utili per il timer.
     private float time = 0;
     private float startTime = -1;
@@ -26,6 +26,8 @@ public class ObjectInteraction : MonoBehaviour
     private bool isClicked = false; //Variabile che mi dice se ho cliccato il device.
     private bool isDragged = false; //Variabile che mi dice se sto tenendo premuto sul device.
     private static bool isHacking = false; //Variabile che mi dice se sto hackerando il device.
+
+    private bool complete = false;
     
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,9 @@ public class ObjectInteraction : MonoBehaviour
         seconds = time % 60;
         
         //Se il device che sto hackerando é stato appena cliccato allora devo far ripartire il cronometro
-        if(isClicked == true){ timerLabel.text = string.Format ("{0:00}", seconds); }
+        if(isClicked == true){ 
+            timerLabel.text = string.Format ("{0:00}", seconds); 
+        }
         
         //Se ho premuto il bottone destro del mouse e ancora non sono nella fase si hacking ma sto comunque cliccando sul device per iniziare l'hacking...
         if (Input.GetMouseButtonDown(0) && isHacking != true && isClicked == true){
@@ -68,31 +72,39 @@ public class ObjectInteraction : MonoBehaviour
                 startTime = UnityEngine.Time.time;
                 isDragged = false;
                 isHacking = true;
-                phaseLabel.text = "Hacking...";
-                phaseLabel.color = Color.green;
             }
+            messageLabel.gameObject.SetActive(true);
+            messageLabel.text = "Press SPACE as fast as you can.";
+
             //Richiamo la funzione che mi simula l'hacking del device.
             hacking();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isHacking == true)
+        {
+            counter++;
+            counterBar.value += 1;
+            
         }
     }
 
     //Se faccio click sul device cambio la label del device che voglio hackerare e poi setto a true la variabile che mi dice che ho selezionato un device.
     //Setto anche le label della UI del pc.
     void OnMouseDown(){
-        if(isHacking == false){
-            if(isHackerable == true){
+        if(complete != true){
+            if(isHacking == false){
                 isClicked = true;
                 deviceLabel.text = device;
-                passwordLabel.text = "Password: ----";
-                phaseLabel.text = "Connection....";
-                phaseLabel.color = Color.yellow;
+                messageLabel.gameObject.SetActive(false);
             }
             else{
-                phaseLabel.text = "DENIED";
+                Debug.Log("You can't.");
             }
         }
         else{
-            Debug.Log("You can't.");
+            deviceLabel.text = device;
+            messageLabel.gameObject.SetActive(true);
+            messageLabel.text = "COMPLETE";
         }
     }
 
@@ -103,12 +115,20 @@ public class ObjectInteraction : MonoBehaviour
 
         //Superati i 20 secondi vuol dire che l'hacking é andato a buon fine e quindi viene restituita la password del device.
         //Setto anche le label che mi dicono la fare e la password del device hackerato.
-        if(seconds > 20){
+        if(seconds > 10){
+            if(counter < 50){
+                messageLabel.text = "FAIL";
+            }
+            else{
+                messageLabel.text = "COMPLETE";
+                CamAlarm alarm = cam.GetComponent<CamAlarm>();
+                alarm.enabled = false;
+                complete = true;
+            }
             isHacking = false;
             startTime = -1;
-            phaseLabel.text = "COMPLETE";
-            passwordLabel.text = "Password: " + password;
-            phaseLabel.color = Color.red;
+            counter = 0;
+            counterBar.value = 0;
         }
     }
 }

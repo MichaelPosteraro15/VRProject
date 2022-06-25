@@ -41,6 +41,9 @@ public class Doors : MonoBehaviour
 
     void DoorControl(string direction)
     {
-        animator.SetTrigger(direction);
+        try{
+            animator.SetTrigger(direction);
+        }
+        catch{}
     }
 }
