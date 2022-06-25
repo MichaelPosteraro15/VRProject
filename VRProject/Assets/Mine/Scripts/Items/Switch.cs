@@ -10,8 +10,12 @@ public class Switch : MonoBehaviour
     public Animator animator;
     public Transform leftElbow;
     public Transform rightElbow;
+    public GameObject arms;
+    public GameObject pc;
+
+
     private bool lowL = false;
-    private bool lowD = false;
+    private bool _showPc = false;
 
 
     public int numOb;
@@ -96,32 +100,113 @@ public class Switch : MonoBehaviour
 
         //in base all'oggetto cambia la posizione delle mani
         string obName = transform.GetChild(selectOb).gameObject.name;
-
+        
         if (obName == "Empty")
         {
-
+            //se è vuoto non vediamo il pc
+            pc.SetActive(false);
             if (lowL)
             {
-                leftElbow.eulerAngles = new Vector3(
-                leftElbow.eulerAngles.x+47,
-                leftElbow.eulerAngles.y,
-                leftElbow.eulerAngles.z
-                );
+                //se la mano era bassa l'alziamo
+                raiseHand();
                 lowL = false;
+
+
             }
-            
-            
+            // se il pc era visibile spostiamo la mano
+            else if (_showPc)
+            {
+
+                hidePc();
+                _showPc = false;
+
+            }
+
+
         }
-        else
+        //se il pc è selezionato spostiamo la mano destra, abbassiamo la sinistra e mostriamo il pc
+        else if (obName =="Pc")
         {
+            pc.SetActive(true);   
+            //se la mano sinistra non era bassa allora la abbassiamo
             if (!lowL)
             {
-                leftElbow.eulerAngles = new Vector3(
-                 leftElbow.eulerAngles.x - 47,
-                 leftElbow.eulerAngles.y,
-                 leftElbow.eulerAngles.z);
-                 lowL = true;
+                lowerHand();
+                lowL = true;
+
+
+            }
+            // se il pc non era visibile, lo rendiamo tale e spostiamo la mano
+            else if (!_showPc)
+            {
+
+                _showPc = true;
+                showPcHand();
+
+            }
+
+
+
+        }
+        else
+        {//di base il pc non si deve vedere
+            pc.SetActive(false);
+
+            if (!lowL)
+            {
+                //la mano rimane abbassata
+                lowerHand();
+                lowL = true;
+
+
+            }
+            if (_showPc)
+            {
+                _showPc = false;
+                hidePc();
+
             }
         }
     }
+
+    private void showPcHand()
+    {
+        rightElbow.eulerAngles = new Vector3(
+              leftElbow.eulerAngles.x - 5,
+              leftElbow.eulerAngles.y,
+              leftElbow.eulerAngles.z -80
+              );
+
+    }
+
+    private void hidePc()
+    {
+        rightElbow.eulerAngles = new Vector3(
+                leftElbow.eulerAngles.x + 5,
+                leftElbow.eulerAngles.y,
+                leftElbow.eulerAngles.z +80
+                );
+
+    }
+
+    private void raiseHand()
+    {
+        leftElbow.eulerAngles = new Vector3(
+               leftElbow.eulerAngles.x + 47,
+               leftElbow.eulerAngles.y,
+               leftElbow.eulerAngles.z
+               );
+    
+    
+    }
+
+    private void lowerHand()
+    {
+        leftElbow.eulerAngles = new Vector3(
+                 leftElbow.eulerAngles.x - 47,
+                 leftElbow.eulerAngles.y,
+                 leftElbow.eulerAngles.z);
+    }
+
+    
 }
