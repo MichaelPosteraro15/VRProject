@@ -20,4 +20,17 @@ public class Sound {
 	[HideInInspector]
 	public AudioSource source;
 
+	public void setVolume(float volume)
+    {
+		if (volume < 0f)
+        {
+			volume = 0f;
+		}
+			
+		else if (volume>1f)
+        {
+			volume = 1f;
+        }
+    }
+
 }
