@@ -45,8 +45,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Fire
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: e2280e3a0025e0341b7e5063d3e31952, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: knife
+    clip: {fileID: 8300000, guid: b86a35cf62d8db9408eb4b25e17cb675, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: gas leak
+    clip: {fileID: 8300000, guid: ad464c7f7cff3ba4c8ca46febe8c929d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: airHit
+    clip: {fileID: 8300000, guid: 9f25eab950e5c1d4283d7fa0972c09ad, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: crowbarShoot
+    clip: {fileID: 8300000, guid: 71e31c278b7f11a4daba4f20be066519, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: walk
+    clip: {fileID: 8300000, guid: 5953fec29a027f6468e4bbbf3a825aff, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
