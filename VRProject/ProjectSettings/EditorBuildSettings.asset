@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Mine/Scenes/ServerRoomScene.unity
+    guid: 547be0080a9fdf34da72ec1c542b2423
   m_configObjects: {}
