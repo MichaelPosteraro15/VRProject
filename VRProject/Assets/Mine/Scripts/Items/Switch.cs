@@ -104,14 +104,48 @@ public class Switch : MonoBehaviour
         if (obName == "Gun" && Managers.Inventory.GetItemCount("gun") == 0)
         {
             if (less)
+            {
                 selectOb--;
+                if (selectOb == -1)
+                {
+                    selectOb = gameObject.transform.childCount - 1;
+                }
+            }
             else
+            {
                 selectOb++;
+                if (selectOb == gameObject.transform.childCount)
+                {
+                    selectOb = 0;
+                }
+            }
+                
 
         }
-            
-            //parte animazine di cambio oggetto
-            animator.Play("SwitchObject");
+        if (obName == "crowbar" && Managers.Inventory.GetItemCount("crowbar") == 0)
+        {
+            if (less)
+            {
+                selectOb--;
+                if (selectOb == -1)
+                {
+                    selectOb = gameObject.transform.childCount - 1;
+                }
+            }
+            else
+            {
+                selectOb++;
+                if (selectOb == gameObject.transform.childCount)
+                {
+                    selectOb = 0;
+                }
+            }
+
+        }
+         obName = transform.GetChild(selectOb).gameObject.name;
+
+        //parte animazine di cambio oggetto
+        animator.Play("SwitchObject");
 
         foreach (Transform ob in transform)
         {   //rende tutti gli oggetti non attivi
