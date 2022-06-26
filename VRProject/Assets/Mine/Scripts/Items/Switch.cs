@@ -36,6 +36,10 @@ public class Switch : MonoBehaviour
         //scorriamo con la rotellina del mouse tutti gli oggetti che abbiamo a disposizione
         if (Input.GetAxis("Mouse ScrollWheel")>0) // forward
         {
+            if(_showPc)
+                arms.gameObject.SetActive(true);
+
+
             //aumentiamo il contatore dell'oggetto selezionato
             selectOb++;
             switch_ = true;
@@ -48,7 +52,10 @@ public class Switch : MonoBehaviour
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-             selectOb--;
+            if (_showPc)
+                arms.gameObject.SetActive(true);
+
+            selectOb--;
             switch_ = true;
 
             //se il contatore è arrivato all'ultimo oggetto disponibile ritorna al l'ultimo
@@ -171,21 +178,14 @@ public class Switch : MonoBehaviour
 
     private void showPcHand()
     {
-        rightElbow.eulerAngles = new Vector3(
-              leftElbow.eulerAngles.x - 5,
-              leftElbow.eulerAngles.y,
-              leftElbow.eulerAngles.z -80
-              );
+        arms.transform.localScale = new Vector3(0, 0, 0);
 
     }
 
     private void hidePc()
     {
-        rightElbow.eulerAngles = new Vector3(
-                leftElbow.eulerAngles.x + 5,
-                leftElbow.eulerAngles.y,
-                leftElbow.eulerAngles.z +80
-                );
+        arms.transform.localScale = new Vector3(1, 1, 1);
+
 
     }
 
