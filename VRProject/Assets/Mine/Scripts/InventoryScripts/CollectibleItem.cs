@@ -6,7 +6,7 @@ public class CollectibleItem : MonoBehaviour
 {
     //nome dell'oggetto
     [SerializeField] private string itemName;
-    [SerializeField] private bool okAnimation;
+    [SerializeField] private bool okAnimation = true;
 
     //piccola animazione per gli oggetti che si trovano nell mappa
     private bool anim;

@@ -12,6 +12,7 @@ public class Switch : MonoBehaviour
     public Transform rightElbow;
     public GameObject arms;
     public GameObject pc;
+    public bool less;
 
 
     private bool lowL = false;
@@ -43,7 +44,7 @@ public class Switch : MonoBehaviour
             //aumentiamo il contatore dell'oggetto selezionato
             selectOb++;
             switch_ = true;
-
+            less = false;
             //se il contatore è arrivato all'ultimo oggetto disponibile ritorna al primo
             if (selectOb == gameObject.transform.childCount)
             {
@@ -57,6 +58,7 @@ public class Switch : MonoBehaviour
 
             selectOb--;
             switch_ = true;
+            less = true;
 
             //se il contatore è arrivato all'ultimo oggetto disponibile ritorna al l'ultimo
             if (selectOb == -1)
@@ -95,8 +97,21 @@ public class Switch : MonoBehaviour
     //metodo che "prende" l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
     private void SelectObject()
     {
-        //parte animazine di cambio oggetto
-        animator.Play("SwitchObject");
+        //prendo il nome dell'oggetto che possiede in mano attualmente
+        string obName = transform.GetChild(selectOb).gameObject.name;
+
+
+        if (obName == "Gun" && Managers.Inventory.GetItemCount("gun") == 0)
+        {
+            if (less)
+                selectOb--;
+            else
+                selectOb++;
+
+        }
+            
+            //parte animazine di cambio oggetto
+            animator.Play("SwitchObject");
 
         foreach (Transform ob in transform)
         {   //rende tutti gli oggetti non attivi
@@ -107,7 +122,8 @@ public class Switch : MonoBehaviour
         transform.GetChild(selectOb).gameObject.SetActive(true);
 
         //in base all'oggetto cambia la posizione delle mani
-        string obName = transform.GetChild(selectOb).gameObject.name;
+
+        //cambia l'oggetto corrente
         CurrentItem.Instance.setCurrentItem(obName);
 
         if (obName == "Empty")
