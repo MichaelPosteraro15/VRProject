@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: gun
+  okAnimation: 1
 --- !u!1001 &4775797754174634265
 PrefabInstance:
   m_ObjectHideFlags: 0
