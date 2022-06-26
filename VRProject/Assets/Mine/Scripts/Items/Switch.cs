@@ -92,9 +92,10 @@ public class Switch : MonoBehaviour
 
     }
 
-    //metodo che prende l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
+    //metodo che "prende" l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
     private void SelectObject()
     {
+        //parte animazine di cambio oggetto
         animator.Play("SwitchObject");
 
         foreach (Transform ob in transform)
@@ -107,7 +108,8 @@ public class Switch : MonoBehaviour
 
         //in base all'oggetto cambia la posizione delle mani
         string obName = transform.GetChild(selectOb).gameObject.name;
-        
+        CurrentItem.Instance.setCurrentItem(obName);
+
         if (obName == "Empty")
         {
             //se è vuoto non vediamo il pc
