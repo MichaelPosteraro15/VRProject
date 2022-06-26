@@ -7,7 +7,7 @@ public class CrowBarDoors : MonoBehaviour
     public Animator animator;
 
     private bool doorOpen;
-    private bool inTrigger;
+    private     bool inTrigger;
     // Start is called before the first frame update
     void Start()
     {
