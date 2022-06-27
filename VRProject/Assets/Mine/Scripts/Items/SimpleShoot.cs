@@ -68,6 +68,7 @@ public class SimpleShoot : MonoBehaviour
 
         }
 
+        //se nell'inventario sono presenti i proiettili allora la pistola si ricarica
         if (Managers.Inventory.GetItemCount("bullets") != 0)
         {
             rechargeAmmo();
