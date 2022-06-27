@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 744462370}
+  animatorHands: {fileID: 0}
 --- !u!114 &1858098188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  animatorHands: {fileID: 0}
 --- !u!1001 &8760116344275690714
 PrefabInstance:
   m_ObjectHideFlags: 0

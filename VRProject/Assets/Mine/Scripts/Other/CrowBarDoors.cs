@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrowBarDoors : MonoBehaviour
 {
     public Animator animator;
+    public Animator animatorHands;
 
     private bool doorOpen;
     private     bool inTrigger;
@@ -21,6 +22,7 @@ public class CrowBarDoors : MonoBehaviour
            if( Input.GetMouseButtonUp(0) && CurrentItem.Instance.getCurrentItem()=="crowbar"){
                 Debug.Log("APRI");
                 doorOpen = true;
+                animatorHands.Play("openDoorCrow");
                 animator.Play("OpenWithCrowbar");
             }
         }
