@@ -164,6 +164,8 @@ public class Switch : MonoBehaviour
         {
             //se è vuoto non vediamo il pc
             pc.SetActive(false);
+            hidePc();
+
             if (lowL)
             {
                 //se la mano era bassa l'alziamo
@@ -187,22 +189,10 @@ public class Switch : MonoBehaviour
         else if (obName =="Pc")
         {
             pc.SetActive(true);   
-            //se la mano sinistra non era bassa allora la abbassiamo
-            if (!lowL)
-            {
-                lowerHand();
-                lowL = true;
+            _showPc = true;
+            showPcHand();
 
-
-            }
-            // se il pc non era visibile, lo rendiamo tale e spostiamo la mano
-            else if (!_showPc)
-            {
-
-                _showPc = true;
-                showPcHand();
-
-            }
+            
 
 
 
@@ -210,6 +200,7 @@ public class Switch : MonoBehaviour
         else
         {//di base il pc non si deve vedere
             pc.SetActive(false);
+            hidePc();
 
             if (!lowL)
             {
