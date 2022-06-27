@@ -35,13 +35,13 @@ public class FPSInput : MonoBehaviour
             animator.SetBool("Run", true);
             if (!soundPlay)
             {
-                AudioManager.instance.Play("footsteps");
+                AudioManager.instance.Play("footsteps3");
                 soundPlay = true;
             }
         }
         else
         {
-            AudioManager.instance.Stop("footsteps");
+            AudioManager.instance.Stop("footsteps3");
             soundPlay = false;
 
 
