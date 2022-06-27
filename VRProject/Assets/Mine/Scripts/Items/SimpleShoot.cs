@@ -72,6 +72,7 @@ public class SimpleShoot : MonoBehaviour
         if (Managers.Inventory.GetItemCount("bullets") != 0)
         {
             rechargeAmmo();
+            AudioManager.instance.Play("reloadGun");
             Managers.Inventory.ConsumeItem("bullets");
         }
     }
