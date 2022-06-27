@@ -98,3 +98,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: footsteps
+    clip: {fileID: 8300000, guid: 9e675d9857e9e3647baaa4abd67f45a3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: footsteps2
+    clip: {fileID: 8300000, guid: a97f5e0036d403b42bfb719f5c20b284, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: footsteps3
+    clip: {fileID: 8300000, guid: d75b3aa55e61f224d86718e48043f3aa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

@@ -9,6 +9,7 @@ public class FPSInput : MonoBehaviour
     public float speed = 6.0f;
     public float gravity = -9.8f;
     private CharacterController _charController;
+    private bool soundPlay=false;
 
     //aggiungo un animazione al player, ANIMATOR CONTENUTO IN ARMS
     public Animator animator;
@@ -32,6 +33,17 @@ public class FPSInput : MonoBehaviour
         if (deltaX != 0 || deltaZ != 0)
         {
             animator.SetBool("Run", true);
+            if (!soundPlay)
+            {
+                AudioManager.instance.Play("footsteps");
+                soundPlay = true;
+            }
+        }
+        else
+        {
+            AudioManager.instance.Stop("footsteps");
+            soundPlay = false;
+
 
         }
 
