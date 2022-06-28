@@ -67,7 +67,7 @@ public class Switch : MonoBehaviour
             }
 
         }
-
+        /*
         //scorro tutti i figli 
         for (int i=1;i<=numOb;i++)
         {
@@ -81,6 +81,7 @@ public class Switch : MonoBehaviour
                 SelectObject();
             }
         }
+        */
         
 
         //se si verifica l'evento del mouse allora vuol dire che bisognerà cambiare oggetto
@@ -100,7 +101,7 @@ public class Switch : MonoBehaviour
         //prendo il nome dell'oggetto che possiede in mano attualmente
         string obName = transform.GetChild(selectOb).gameObject.name;
 
-
+        /* SE GLI OGGETTI NON SONO NELL'INVENTARIO ALLORA NON SARANNO DISPONIBILI
         if (obName == "Gun" && Managers.Inventory.GetItemCount("gun") == 0)
         {
             if (less)
@@ -119,9 +120,10 @@ public class Switch : MonoBehaviour
                     selectOb = 0;
                 }
             }
-                
-
+               
         }
+        
+
         if (obName == "crowbar" && Managers.Inventory.GetItemCount("crowbar") == 0)
         {
             if (less)
@@ -142,6 +144,11 @@ public class Switch : MonoBehaviour
             }
 
         }
+
+        */
+
+
+
          obName = transform.GetChild(selectOb).gameObject.name;
 
         //parte animazine di cambio oggetto
