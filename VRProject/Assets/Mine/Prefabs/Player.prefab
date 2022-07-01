@@ -332,8 +332,11 @@ GameObject:
   - component: {fileID: 5892488452547362436}
   - component: {fileID: 5892488452547362459}
   - component: {fileID: 5892488452547362438}
+<<<<<<< HEAD
   - component: {fileID: 49985474}
   - component: {fileID: 1922915406}
+=======
+>>>>>>> feature
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -351,8 +354,12 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 543450652006884579}
+=======
+  m_Children: []
+>>>>>>> feature
   m_Father: {fileID: 5892488452617091304}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -424,6 +431,7 @@ MonoBehaviour:
   sensitivityVert: 9
   minimumVert: -45
   maximumVert: 45
+<<<<<<< HEAD
 --- !u!114 &49985474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e393dfd152001bf4ba8e3f99154d9109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> feature
 --- !u!1 &5892488452617091298
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,9 +21,14 @@ public class RayShooter : MonoBehaviour
         int size = 24;
         float posX = _camera.pixelWidth/2 - size/4;
         float posY = _camera.pixelHeight/2 - size/2;
+<<<<<<< HEAD
        // GUI.Label(new Rect(posX, posY, size, size), "*");
         
+=======
+        GUI.Label(new Rect(posX, posY, size, size), "*");
+>>>>>>> feature
     }
+    
 
     // Update is called once per frame
     void Update(){
