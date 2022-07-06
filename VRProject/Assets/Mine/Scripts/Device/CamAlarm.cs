@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamAlarm : MonoBehaviour
 {
-    //[SerializeField] GameController gameController;
+    [SerializeField] GameController gameController;
 
     public string name;
 
@@ -29,7 +29,7 @@ public class CamAlarm : MonoBehaviour
         if(alarm == true){ Debug.Log(seconds); }
 
         if(seconds > 5 && triggered == false){
-            //gameController.GameOver();
+            gameController.GameOver();
             alarm = false;
             triggered = true;
         }
