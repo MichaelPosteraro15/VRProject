@@ -7,7 +7,7 @@ public class AllarmButton : MonoBehaviour
     [SerializeField] private PasswordScreen screen;
     [SerializeField] private string password;
 
-    //[SerializeField] private GameController gameController; 
+    [SerializeField] private GameController gameController;
 
     bool enabled = true;
     
@@ -32,7 +32,7 @@ public class AllarmButton : MonoBehaviour
 
     void OnTriggerEnter(Collider col){
         if(enabled == true && col.tag == "Enemy"){
-            //gameController.GameOver();
+            gameController.GameOver();
         }
     }
 }
