@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamAlarm : MonoBehaviour
 {
-    public string name;
+    [SerializeField] GameController gameController;
 
     private bool alarm = false;
     private bool triggered = false;
@@ -25,19 +25,17 @@ public class CamAlarm : MonoBehaviour
         if(alarm == true){ Debug.Log(seconds); }
 
         if(seconds > 5 && alarm == true){
-            Debug.Log("Game Over");
+            gameController.GameOver();
             alarm = false;
         }
     }
 
     void OnTriggerEnter(Collider col){
-        Debug.Log("Entrato in: " + name);
         startTime = UnityEngine.Time.time;
         alarm = true;
     }
 
     void OnTriggerExit(Collider col){
-        Debug.Log("Uscito da: " + name);
         startTime = -1;
         alarm = false;
     }

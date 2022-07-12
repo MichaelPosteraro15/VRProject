@@ -13,19 +13,18 @@ public class Popup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            ClosePause();
+        }
     }
 
     public void PauseGame (){
         GameEvent.isPaused = true;
-        //Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
         Time.timeScale = 0f;
     }
 
     public void UnPauseGame (){
         GameEvent.isPaused = false;
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
         Time.timeScale = 1f;
     }
 
@@ -36,8 +35,14 @@ public class Popup : MonoBehaviour
 
     public void Close() {
         gameObject.SetActive(false);
-        Debug.Log("Close");
         UnPauseGame ();
+    }
+
+    public void ClosePause(){
+        gameObject.SetActive(false);
+        GameEvent.isPaused = false;
+        Time.timeScale = 1f;
+        unlockMouse();
     }
 
     public void lockMouse(){
