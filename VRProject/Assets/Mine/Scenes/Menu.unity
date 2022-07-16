@@ -404,11 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 621.2661
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 288.6953
+      value: 359.7
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_LocalScale.x
@@ -452,11 +452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0257
+      value: 0.00048828
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.997986
+      value: -0.0012035
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -479,8 +479,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637690, guid: fb0a632ce2d357944880818117a419bd, type: 3}
-      propertyPath: m_Color.a
+      propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380012204654637690, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d720411f47835bc43bc7e9a4002db1b5, type: 3}
+    - target: {fileID: 1380012204654637690, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637690, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_Enabled
