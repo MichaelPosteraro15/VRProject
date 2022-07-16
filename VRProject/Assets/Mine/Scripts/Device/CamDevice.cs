@@ -40,9 +40,7 @@ public class CamDevice : MonoBehaviour
         seconds = time % 60;
         
         //Se il device che sto hackerando é stato appena cliccato allora devo far ripartire il cronometro
-        if(isClicked == true){ 
-            timerLabel.text = string.Format ("{0:00}", seconds); 
-        }
+        if(isClicked == true){ timerLabel.text = string.Format ("{0:00}", seconds); }
         
         //Se ho premuto il bottone destro del mouse e ancora non sono nella fase si hacking ma sto comunque cliccando sul device per iniziare l'hacking...
         if (Input.GetMouseButtonDown(0) && isHacking != true && isClicked == true){
@@ -84,7 +82,6 @@ public class CamDevice : MonoBehaviour
         {
             counter++;
             counterBar.value += 1;
-            
         }
     }
 
@@ -97,9 +94,7 @@ public class CamDevice : MonoBehaviour
                 deviceLabel.text = device;
                 messageLabel.gameObject.SetActive(false);
             }
-            else{
-                Debug.Log("You can't.");
-            }
+            else{ Debug.Log("You can't.");}
         }
         else{
             deviceLabel.text = device;
