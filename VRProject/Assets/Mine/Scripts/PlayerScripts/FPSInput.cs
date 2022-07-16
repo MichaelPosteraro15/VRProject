@@ -23,7 +23,12 @@ public class FPSInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (GameEvent.isPaused)
+        {
+            AudioManager.instance.Stop("footsteps3");
+
+        }
+
         animator.SetBool("Run", false);
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
