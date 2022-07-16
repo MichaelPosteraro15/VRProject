@@ -14,7 +14,7 @@ public class Popup : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
-            ClosePause();
+            CloseAll();
         }
     }
 
@@ -28,6 +28,16 @@ public class Popup : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void LockMouse(){
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void UnlockMouse(){
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void Open() {
         gameObject.SetActive(true);
         PauseGame ();
@@ -38,20 +48,10 @@ public class Popup : MonoBehaviour
         UnPauseGame ();
     }
 
-    public void ClosePause(){
+    public void CloseAll(){
         gameObject.SetActive(false);
-        GameEvent.isPaused = false;
-        Time.timeScale = 1f;
-        unlockMouse();
+        UnPauseGame();
+        UnlockMouse();
     }
 
-    public void lockMouse(){
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-
-    public void unlockMouse(){
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
 }

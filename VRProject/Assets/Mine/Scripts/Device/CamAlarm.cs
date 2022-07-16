@@ -24,7 +24,7 @@ public class CamAlarm : MonoBehaviour
 
         if(alarm == true){ Debug.Log(seconds); }
 
-        if(seconds > 5 && alarm == true){
+        if(seconds > 2 && alarm == true){
             gameController.GameOver();
             alarm = false;
         }

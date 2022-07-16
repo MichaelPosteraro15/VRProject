@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 //Serve anche a capire se il gioco é finito.
 public class GameController : MonoBehaviour
 {
-    [SerializeField] Canvas gameOverCanvas;
-
+    [SerializeField] private GameObject hud;
+    
     //Variabili per capire se i due obiettivi sono stati raggiunti.
     private bool goal1 = false;
     private bool goal2 = false;
@@ -25,17 +25,25 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(goal1 == true && goal2 == true){}
+        if(goal1 == true){
+            hud.GetComponent<HUD>().OpenWinCanvas();
+            if(Input.GetKeyDown("space")){
+                StartGame();
+            }
+        }
 
         if(Input.GetKeyDown("space") && gameOver == true){
-            gameOverCanvas.gameObject.SetActive(false); 
-            SceneManager.LoadScene(level);
             gameOver = false;
+            SceneManager.LoadScene(level);
         }
     }
 
     public void StartGame(){
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(1);
+
         gameOver = false;
         goal1 = false;
         goal2 = false;
@@ -50,9 +58,8 @@ public class GameController : MonoBehaviour
 
     //Setto gameOver a true se ho perso
     public void GameOver(){
-        gameOverCanvas.gameObject.SetActive(true); 
-        gameOverCanvas.GetComponent<GameOverCanvas>().GameOverScene();
         gameOver = true; 
+        hud.GetComponent<HUD>().OpenGameOverCanvas();
     }
 
     //Setto goal1 a true se ho raggiunto il primo obiettivo

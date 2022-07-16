@@ -79,7 +79,7 @@ public class Device : MonoBehaviour
     //Se faccio click sul device cambio la label del device che voglio hackerare e poi setto a true la variabile che mi dice che ho selezionato un device.
     //Setto anche le label della UI del pc.
     void OnMouseDown(){
-        if(isHacking == false){
+        if(isHacking == false && CurrentItem.Instance.getCurrentItem() == "Pc"){
             deviceLabel.text = device;
             if(isHackerable == true){
                 isClicked = true;
