@@ -21,6 +21,9 @@ public class Empty : MonoBehaviour
 
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
+
         if (Input.GetMouseButtonUp(0))
         {
             Shot();

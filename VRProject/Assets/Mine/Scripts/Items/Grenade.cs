@@ -27,6 +27,9 @@ public class Grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
+
         if (currentGrenade == 0)
             Destroy(gameObject);
 

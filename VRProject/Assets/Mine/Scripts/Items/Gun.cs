@@ -24,7 +24,9 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        
+        if (GameEvent.isPaused)
+            return;
+
         //quando si verifica l'evento richiamiamo il metodo Fire che ci permette di sparare
         if (Input.GetMouseButtonUp(0) && Time.time >=nextTime){
             nextTime = Time.time + 1f / fireRate;
