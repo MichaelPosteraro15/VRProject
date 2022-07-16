@@ -80,8 +80,8 @@ public class CamDevice : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isHacking == true)
         {
-            counter++;
-            counterBar.value += 1;
+            counter += 1;
+            counterBar.value = counter;
         }
     }
 
@@ -89,7 +89,7 @@ public class CamDevice : MonoBehaviour
     //Setto anche le label della UI del pc.
     void OnMouseDown(){
         if(complete != true){
-            if(isHacking == false){
+            if(isHacking == false && CurrentItem.Instance.getCurrentItem() == "Pc"){
                 isClicked = true;
                 deviceLabel.text = device;
                 messageLabel.gameObject.SetActive(false);
