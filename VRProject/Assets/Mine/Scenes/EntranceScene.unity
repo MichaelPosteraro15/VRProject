@@ -5098,11 +5098,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4184875029496670, guid: ec2a6eb55d6bac64f8e60e43c3cb20ad, type: 3}
   m_PrefabInstance: {fileID: 780046999}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &710592772 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 164805577, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
-  m_PrefabInstance: {fileID: 1741451611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &725217954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3646950960811949498, guid: 845ec86c78d2a2c448e66e3b0e30e890, type: 3}
@@ -9611,18 +9606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 744462368, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
-      propertyPath: m_Size.z
-      value: 6.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 744462368, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
-      propertyPath: m_Center.z
-      value: 2.61
-      objectReference: {fileID: 0}
     - target: {fileID: 744462369, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
       propertyPath: animatorHands
       value: 
-      objectReference: {fileID: 710592772}
+      objectReference: {fileID: 2084167809}
     - target: {fileID: 9159919280423368554, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
       propertyPath: m_Name
       value: DoorCrowbar (1)
@@ -15260,6 +15247,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082835609}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &2084167809 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3347136793642120483, guid: a43c3417eac523c4795dacbe06b26988, type: 3}
+  m_PrefabInstance: {fileID: 1741451611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2085847471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16171,7 +16163,7 @@ PrefabInstance:
     - target: {fileID: 744462369, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
       propertyPath: animatorHands
       value: 
-      objectReference: {fileID: 710592772}
+      objectReference: {fileID: 2084167809}
     - target: {fileID: 9159919280423368554, guid: 85b4a16274c71a840978d3457ee22de8, type: 3}
       propertyPath: m_Name
       value: DoorCrowbar
