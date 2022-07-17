@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//CLASSE NON USATA
+//VEDERE SIMPLESHOOT
 public class Gun : MonoBehaviour
 {
     
