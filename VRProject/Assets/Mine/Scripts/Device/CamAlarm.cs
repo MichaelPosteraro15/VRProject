@@ -24,7 +24,7 @@ public class CamAlarm : MonoBehaviour
 
         if(alarm == true){ Debug.Log(seconds); }
 
-        if(seconds > 2 && alarm == true){
+        if(seconds > 2.5 && alarm == true){
             gameController.GameOver();
             alarm = false;
         }
@@ -33,10 +33,12 @@ public class CamAlarm : MonoBehaviour
     void OnTriggerEnter(Collider col){
         startTime = UnityEngine.Time.time;
         alarm = true;
+        AudioManager.instance.Play("alarm2");
     }
 
     void OnTriggerExit(Collider col){
         startTime = -1;
         alarm = false;
+        AudioManager.instance.Stop("alarm2");
     }
 }
