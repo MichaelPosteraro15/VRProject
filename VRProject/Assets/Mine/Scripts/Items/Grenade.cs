@@ -28,7 +28,11 @@ public class Grenade : MonoBehaviour
     void Update()
     {
         if (GameEvent.isPaused)
+        {
+            AudioManager.instance.Stop("gas leak");
             return;
+
+        }
 
         if (currentGrenade == 0)
             Destroy(gameObject);
