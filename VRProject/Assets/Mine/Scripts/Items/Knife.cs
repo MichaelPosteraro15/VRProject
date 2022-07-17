@@ -22,6 +22,8 @@ public class Knife : MonoBehaviour
 
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
 
         //quando si verifica l'evento richiamiamo il metodo Fire che ci permette di colpire
         if (Input.GetMouseButtonUp(0) )
