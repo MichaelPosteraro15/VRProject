@@ -77,7 +77,7 @@ public class CamDevice : MonoBehaviour
             //Richiamo la funzione che mi simula l'hacking del device.
             hacking();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Space) && isHacking == true)
         {
             counter += 1;
