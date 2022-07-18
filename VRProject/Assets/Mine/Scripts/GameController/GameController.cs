@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(goal1 == true){
+        if(goal1 == true && goal2 == true){
             hud.GetComponent<HUD>().OpenWinCanvas();
             if(Input.GetKeyDown("space")){
                 StartGame();

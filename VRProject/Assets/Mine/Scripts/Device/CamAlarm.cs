@@ -33,6 +33,7 @@ public class CamAlarm : MonoBehaviour
     void OnTriggerEnter(Collider col){
         startTime = UnityEngine.Time.time;
         alarm = true;
+
         AudioManager.instance.Play("alarm2");
     }
 
@@ -41,4 +42,5 @@ public class CamAlarm : MonoBehaviour
         alarm = false;
         AudioManager.instance.Stop("alarm2");
     }
+
 }
