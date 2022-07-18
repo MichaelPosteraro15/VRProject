@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//quando le mani sono vuote il player può tirare pugni
 public class Empty : MonoBehaviour
 {
 
@@ -9,7 +10,7 @@ public class Empty : MonoBehaviour
     public float distance = 1;
     public float impact = 60;
 
-    //danno che fa ai nemici
+    //danno che fa ai nemici con il pugno
     public float damage = 0.5f;
     public Animator animator;
 
