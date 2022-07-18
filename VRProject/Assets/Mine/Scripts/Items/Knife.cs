@@ -6,9 +6,12 @@ public class Knife : MonoBehaviour
 { 
 
     public Transform cam;
+    //distanza
     public float distance = 2;
     public float impact = 80;
-    public float damage = 0;
+
+    //danno che fa ai nemici
+    public float damage = 3;
     public Animator animator;
 
 

@@ -18,6 +18,11 @@ public class SimpleShoot : MonoBehaviour
     
     public float distance = 25;//distanza da cui puo colpire
     public float impact = 150;
+
+    //danno che fa ai nemici
+    public float damage = 5;
+
+
     public GameObject impactEffect;
     public Animator animator;
 

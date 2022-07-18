@@ -8,7 +8,9 @@ public class Crowbar : MonoBehaviour
     public Transform cam;
     public float distance = 5;
     public float impact = 120;
-    public float damage = 0;
+
+    //danno che fa ai nemici
+    public float damage = 2.5f;
     public Animator animator;
 
 

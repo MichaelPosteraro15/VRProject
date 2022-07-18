@@ -14,7 +14,8 @@ public class Grenade : MonoBehaviour
     public float distance = 500;
     public Animator animator;
 
-   // public GameObject grenade;
+    //danno che fa ai nemici
+    public float damage = 0.2f;
 
     // Start is called before the first frame update
     void Start()

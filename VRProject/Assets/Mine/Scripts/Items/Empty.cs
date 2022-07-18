@@ -8,7 +8,9 @@ public class Empty : MonoBehaviour
     public Transform cam;
     public float distance = 1;
     public float impact = 60;
-    public float damage = 0;
+
+    //danno che fa ai nemici
+    public float damage = 0.5f;
     public Animator animator;
 
     void Start()
