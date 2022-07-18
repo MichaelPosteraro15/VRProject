@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//CLASSE NON USATA
+//VEDERE SIMPLESHOOT
 public class Gun : MonoBehaviour
 {
     
@@ -24,7 +24,9 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        
+        if (GameEvent.isPaused)
+            return;
+
         //quando si verifica l'evento richiamiamo il metodo Fire che ci permette di sparare
         if (Input.GetMouseButtonUp(0) && Time.time >=nextTime){
             nextTime = Time.time + 1f / fireRate;

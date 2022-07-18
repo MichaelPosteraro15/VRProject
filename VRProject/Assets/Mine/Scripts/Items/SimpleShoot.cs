@@ -46,6 +46,9 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
+
         animator.SetBool("GunShoot", false);
 
 

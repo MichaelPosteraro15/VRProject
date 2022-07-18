@@ -27,6 +27,13 @@ public class Grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameEvent.isPaused)
+        {
+            AudioManager.instance.Stop("gas leak");
+            return;
+
+        }
+
         if (currentGrenade == 0)
             Destroy(gameObject);
 

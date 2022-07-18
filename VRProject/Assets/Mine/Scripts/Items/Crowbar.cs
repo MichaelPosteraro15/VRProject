@@ -18,6 +18,8 @@ public class Crowbar : MonoBehaviour
 
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
 
         if (Input.GetMouseButtonUp(0))
         {

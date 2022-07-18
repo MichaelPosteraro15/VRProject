@@ -102,17 +102,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Script: {fileID: 0}
   m_Name: Post Process Volume _URP
   m_EditorClassIdentifier: 
-  components:
-  - {fileID: 4707467245619789827}
-  - {fileID: 8873608131002009472}
-  - {fileID: -2587968587819718987}
-  - {fileID: 8046298489326201863}
-  - {fileID: -5875106740441003458}
-  - {fileID: 1177859444706408961}
-  - {fileID: -5826485045981500636}
 --- !u!114 &1177859444706408961
 MonoBehaviour:
   m_ObjectHideFlags: 3

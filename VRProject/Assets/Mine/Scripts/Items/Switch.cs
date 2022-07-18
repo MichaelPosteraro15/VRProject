@@ -29,6 +29,9 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
+
         //gameObject.transform.childCount mi permette di sapere quanti figli ci sono all'interno dell'oggetto (size)
         numOb = gameObject.transform.childCount;
 

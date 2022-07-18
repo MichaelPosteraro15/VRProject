@@ -35,6 +35,8 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameEvent.isPaused)
+            return;
         if (axes == RotationAxes.MouseX) {
             // Il movimento orizzontale avviene intorno all'asse y per questo la rotazione viene messa nel secondo parametro.
             transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
