@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b4737641df6c842a548296d60299b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
+  gameController: {fileID: 2120491762}
 --- !u!65 &222607374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4536,7 +4536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8112611227583510649, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.26781464
+      value: 15.732185
       objectReference: {fileID: 0}
     - target: {fileID: 8112611227583510649, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4577,6 +4577,10 @@ PrefabInstance:
     - target: {fileID: 8925598180260029123, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_Name
       value: Camera2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925598180260029123, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
@@ -8356,7 +8360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8112611227583510649, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.732185
+      value: 27.732185
       objectReference: {fileID: 0}
     - target: {fileID: 8112611227583510649, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8397,6 +8401,10 @@ PrefabInstance:
     - target: {fileID: 8925598180260029123, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: m_Name
       value: Camera1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925598180260029123, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
@@ -8639,6 +8647,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1462262389}
     m_Modifications:
+    - target: {fileID: 1619707240, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 2120491762}
+    - target: {fileID: 1619707241, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
+      propertyPath: device
+      value: CamName1
+      objectReference: {fileID: 0}
     - target: {fileID: 1619707241, guid: 80498f2c823d7ca40a68ea79e4ef8ac3, type: 3}
       propertyPath: counterBar
       value: 

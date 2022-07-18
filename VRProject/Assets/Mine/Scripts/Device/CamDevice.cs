@@ -25,7 +25,7 @@ public class CamDevice : MonoBehaviour
     
     private bool isClicked = false; //Variabile che mi dice se ho cliccato il device.
     private bool isDragged = false; //Variabile che mi dice se sto tenendo premuto sul device.
-    private static bool isHacking = false; //Variabile che mi dice se sto hackerando il device.
+    private bool isHacking = false; //Variabile che mi dice se sto hackerando il device.
 
     private bool complete = false;
     
@@ -59,7 +59,7 @@ public class CamDevice : MonoBehaviour
         }
 
         //Se sono arrivato fino a questo punto tenendo premuto il bottone destro del mouse per più di 5 secondi, allora inizia automaticamente la fase di hacking.
-        if(seconds > 5){
+        if(seconds >= 5){
             //La prima volta che entro faccio ripartire il tempo. Questa volta la durata dell'operazione é 20 secondi.
             //Setto la variabile che mi dice se sto tenendo premuto a false.
             //Setto la variabile che mi dice se sono in fase di hacking a true.
@@ -71,15 +71,17 @@ public class CamDevice : MonoBehaviour
                 isDragged = false;
                 isHacking = true;
             }
-            messageLabel.gameObject.SetActive(true);
-            messageLabel.text = "Press SPACE as fast as you can.";
 
-            //Richiamo la funzione che mi simula l'hacking del device.
-            hacking();
+            if(isHacking == true){
+                messageLabel.gameObject.SetActive(true);
+                messageLabel.text = "Press SPACE as fast as you can.";
+
+                //Richiamo la funzione che mi simula l'hacking del device.
+                hacking();
+            }
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && isHacking == true)
-        {
+        if (Input.GetKeyDown(KeyCode.Space) && isHacking == true){
             counter += 1;
             counterBar.value = counter;
         }
@@ -94,7 +96,7 @@ public class CamDevice : MonoBehaviour
                 deviceLabel.text = device;
                 messageLabel.gameObject.SetActive(false);
             }
-            else{ Debug.Log("You can't.");}
+            else{ Debug.Log("You can't."); }
         }
         else{
             deviceLabel.text = device;
