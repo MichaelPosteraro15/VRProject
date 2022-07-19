@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public NavMeshAgent agent;      
     public Transform[] destinations;    //punti di pattuglia
     private int destPoint=0;
+    public float radius;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,34 +70,36 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         else { agent.SetDestination(alarmButton.position); }
-        
-        //public void OnDrawGizmos()
-        //{
-        //    RaycastHit hit;
-        //    RaycastHit hit2;
-        //    bool isHit = Physics.SphereCast(transform.position, 1.5f, transform.right, out hit,
-        //        forwardRange);
-        //    bool isHit2 = Physics.SphereCast(transform.position, 10f, transform.right, out hit2,
-        //       forwardRange);
-        //    if (isHit)
-        //    {
-        //        Gizmos.color = Color.red;
-        //        Gizmos.DrawRay(transform.position, transform.right * hit.distance);
-        //        Gizmos.DrawWireSphere(transform.position + transform.right * hit.distance, 1.5f);
-        //    }
-        //    if (isHit2)
-        //    {
-        //        Gizmos.color = Color.blue;
-        //        Gizmos.DrawRay(transform.position, transform.right * hit2.distance);
-        //        Gizmos.DrawWireSphere(transform.position + transform.right * hit2.distance, 10.0f);
-        //    }
-        //    else
-        //    {
-        //        Gizmos.color = Color.green;
-        //        Gizmos.DrawRay(transform.position, transform.right * forwardRange);
-        //    }
 
-        //}
+        
+    }
+
+    public void OnDrawGizmos()
+    {
+        RaycastHit hit;
+        RaycastHit hit2;
+        bool isHit = Physics.SphereCast(transform.position, 0.5f, transform.right, out hit,
+            dirRange);
+        bool isHit2 = Physics.SphereCast(transform.position, radius, transform.right, out hit2,
+           dirRange);
+        if (isHit)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, transform.right * hit.distance);
+            Gizmos.DrawWireSphere(transform.position + transform.right * hit.distance, 0.5f);
+        }
+        if (isHit2)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, transform.right * hit2.distance);
+            Gizmos.DrawWireSphere(transform.position + transform.right * hit2.distance, radius);
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, transform.right * dirRange);
+        }
+
     }
 
     private void check(Vector3 direction, float distance)
@@ -104,24 +107,36 @@ public class EnemyMovement : MonoBehaviour
 
         Ray ray = new Ray(transform.position, direction);
         RaycastHit hit;
-        float radius;
-        if ((Vector3.Distance(transform.position, player.position) > 10.0f))
-        {
-            radius = 10.0f;
-        }
-        else { radius = 1.5f; }
-        if (Physics.SphereCast(ray, radius, out hit))
+        float radiusSmall=0.5f;
+        
+        
+        if (Physics.SphereCast(ray, radiusSmall, out hit))
         {
             GameObject hitObject = hit.transform.gameObject;
-            if (hit.distance < distance && hitObject.GetComponent<PlayerCharacter>())
+            
+            if (hit.collider.ToString().Equals(hitObject.GetComponent<BoxCollider>().ToString()) && 
+                hit.distance<15.0)
+            {return;}
+            if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
             {
                 Debug.Log("T'ha visto");
                 alert = true;
-                agent.speed = agent.speed * 2;
             }
 
         }
+        if (Physics.SphereCast(ray, radius, out hit))
+        {
+            GameObject hitObject = hit.transform.gameObject;
 
+            if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
+            {
+                Debug.Log("T'ha visto");
+                alert = true;
+            }
+
+        }
+        if (alert) { agent.speed = agent.speed * 2; }
     }
+    
 
 }
