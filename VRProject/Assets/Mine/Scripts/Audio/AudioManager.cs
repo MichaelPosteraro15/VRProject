@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+
+//audioManager ci permette facilmente di accedere ai suoni inseriti nell'array
+//i principali metodi che possiamo usare sono play e stop
 public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;
@@ -32,13 +35,15 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
-	//quando chiamiamo play si ascolta il soud che gli passiamo(che deve essere nell'array)
+	//il metodo play va a ricercare il suono nell'array e successivamente fa partire la clipaudio
 	public void Play (string sound)
 	{
 		//trova il suono nell'array e lo riproduce
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		s.source.Play();
 	}
+
+	//il metodo Stop va a ricercare il suono nell'array e successivamente fa stoppare la clipaudio
 
 	public void Stop(string sound)
 	{
@@ -55,5 +60,30 @@ public class AudioManager : MonoBehaviour {
 			s.setVolume(v);
         }
     }
+
+	public void StopAll()
+	{
+		foreach (Sound s in sounds)
+		{
+			s.source.Stop();
+		}
+	}
+
+	public void PauseAll()
+	{
+		foreach (Sound s in sounds)
+		{
+			
+			s.source.Pause();
+		}
+	}
+
+	public void setListnerPause(bool v)
+	{
+		AudioListener.pause = v;
+		
+	}
+
+
 
 }

@@ -21,11 +21,18 @@ public class Popup : MonoBehaviour
     public void PauseGame (){
         GameEvent.isPaused = true;
         Time.timeScale = 0f;
+
+        //setto a false la pause del listner cosi i suoni torneranno a sentirsi
+        AudioManager.instance.setListnerPause(true);
     }
 
     public void UnPauseGame (){
         GameEvent.isPaused = false;
         Time.timeScale = 1f;
+
+        //setto a false la pause del listner cosi i suoni torneranno a sentirsi
+        AudioManager.instance.setListnerPause(false);
+
     }
 
     public void LockMouse(){
