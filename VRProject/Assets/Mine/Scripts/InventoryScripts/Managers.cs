@@ -24,7 +24,7 @@ public class Managers : MonoBehaviour
         StartCoroutine(StartupManagers());
     }
 
-    //courotine che effettivamente 
+    //courotine che starta i manager 
     private IEnumerator StartupManagers()
     {
         foreach (IGameManager manager in _startSequence)
