@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     public NavMeshAgent agent;      
     public Transform[] destinations;    //punti di pattuglia
     private int destPoint=0;
+    public float radius;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,16 +71,16 @@ public class EnemyMovement : MonoBehaviour
         }
         else { agent.SetDestination(alarmButton.position); }
 
-       
+        
     }
 
-    void OnDrawGizmos()
+    public void OnDrawGizmos()
     {
         RaycastHit hit;
         RaycastHit hit2;
         bool isHit = Physics.SphereCast(transform.position, 0.5f, transform.right, out hit,
             dirRange);
-        bool isHit2 = Physics.SphereCast(transform.position, 5f, transform.right, out hit2,
+        bool isHit2 = Physics.SphereCast(transform.position, radius, transform.right, out hit2,
            dirRange);
         if (isHit)
         {
@@ -91,7 +92,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(transform.position, transform.right * hit2.distance);
-            Gizmos.DrawWireSphere(transform.position + transform.right * hit2.distance, 5.0f);
+            Gizmos.DrawWireSphere(transform.position + transform.right * hit2.distance, radius);
         }
         else
         {
@@ -107,14 +108,15 @@ public class EnemyMovement : MonoBehaviour
         Ray ray = new Ray(transform.position, direction);
         RaycastHit hit;
         float radiusSmall=0.5f;
-        float radiusBig=5.0f;
-       
+        
         
         if (Physics.SphereCast(ray, radiusSmall, out hit))
         {
             GameObject hitObject = hit.transform.gameObject;
-            if (hit.distance < distance && hitObject.GetComponent<BoxCollider>())
-            { return; }
+            
+            if (hit.collider.ToString().Equals(hitObject.GetComponent<BoxCollider>().ToString()) && 
+                hit.distance<15.0)
+            {return;}
             if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
             {
                 Debug.Log("T'ha visto");
@@ -122,9 +124,10 @@ public class EnemyMovement : MonoBehaviour
             }
 
         }
-        if (Physics.SphereCast(ray, radiusBig, out hit))
+        if (Physics.SphereCast(ray, radius, out hit))
         {
             GameObject hitObject = hit.transform.gameObject;
+
             if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
             {
                 Debug.Log("T'ha visto");
@@ -133,7 +136,7 @@ public class EnemyMovement : MonoBehaviour
 
         }
         if (alert) { agent.speed = agent.speed * 2; }
-
-
     }
+    
+
 }
