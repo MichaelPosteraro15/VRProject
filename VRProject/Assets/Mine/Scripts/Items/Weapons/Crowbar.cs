@@ -10,7 +10,7 @@ public class Crowbar : MonoBehaviour
     public float impact = 120;
 
     //danno che fa ai nemici
-    public float damage = 2.5f;
+    public float damage = WeaponsDamage.CROWBAR;
     public Animator animator;
 
 

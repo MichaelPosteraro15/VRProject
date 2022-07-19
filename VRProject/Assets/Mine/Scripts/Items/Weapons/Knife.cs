@@ -11,7 +11,7 @@ public class Knife : MonoBehaviour
     public float impact = 80;
 
     //danno che fa ai nemici
-    public float damage = 3;
+    public float damage = WeaponsDamage.KNIFE;
     public Animator animator;
 
 
@@ -37,7 +37,7 @@ public class Knife : MonoBehaviour
 
     }
 
-
+    //metodo che definisce cosa avviene quando il colpo con il coltello viene sferrato\
     private void Shoot()
     {
         RaycastHit hit;

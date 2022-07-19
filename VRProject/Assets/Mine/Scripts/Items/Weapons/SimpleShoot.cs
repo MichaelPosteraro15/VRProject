@@ -20,7 +20,7 @@ public class SimpleShoot : MonoBehaviour
     public float impact = 150;
 
     //danno che fa ai nemici
-    public float damage = 5;
+    public float damage = WeaponsDamage.GUN;
 
 
     public GameObject impactEffect;
@@ -86,7 +86,7 @@ public class SimpleShoot : MonoBehaviour
     }
 
 
-    //quando avviene il colpo 
+    //Metodo che gestisce cosa avviene al colpo
     private void _shoot()
     {
         //parte clip audio fire
@@ -107,7 +107,7 @@ public class SimpleShoot : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * impact);
             }
 
-            //effetto su ciò che è stato colpito
+            //effetto del proiettile  su ciò che è stato colpito
             Quaternion impactR = Quaternion.LookRotation(hit.normal);
             GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
             
@@ -117,6 +117,21 @@ public class SimpleShoot : MonoBehaviour
         }
     }
 
+    //le munizioni diminuiscono
+    private void updateAmmo()
+    {
+        currentAmmo--;
+    }
+
+    //ricarico
+    private void rechargeAmmo()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+
+
+    //effetti
     //This function creates the bullet behavior
     void Shoot()
     {
@@ -162,18 +177,7 @@ public class SimpleShoot : MonoBehaviour
 
 
 
-    //le munizioni diminuiscono
-    private void updateAmmo()
-    {
-        currentAmmo--;
-    }
-
-    //ricarico
-    private void rechargeAmmo()
-    {
-        currentAmmo = maxAmmo;
-    }
-
+   
 
 
 }

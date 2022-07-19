@@ -11,7 +11,7 @@ public class Empty : MonoBehaviour
     public float impact = 60;
 
     //danno che fa ai nemici con il pugno
-    public float damage = 0.5f;
+    public float damage = WeaponsDamage.PUNCH;
     public Animator animator;
 
     void Start()
@@ -29,13 +29,14 @@ public class Empty : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            Shot();
+            Shoot();
         }
 
     }
 
 
-    private void Shot()
+    //metodo che gestisce quando avviene il colpo
+    private void Shoot()
     {
         RaycastHit hit;
         //AudioManager.instance.Play();

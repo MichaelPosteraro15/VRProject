@@ -15,7 +15,7 @@ public class Grenade : MonoBehaviour
     public Animator animator;
 
     //danno che fa ai nemici
-    public float damage = 0.2f;
+    public float damage = WeaponsDamage.GRANADE;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class Grenade : MonoBehaviour
                 
         }
     }
-
+    //metodo che gestisce cosa accade quando la granata viene lanciata
     private void _throw()
     {
         effect.Play();
