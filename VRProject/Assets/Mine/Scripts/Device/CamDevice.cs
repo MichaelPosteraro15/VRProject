@@ -119,6 +119,8 @@ public class CamDevice : MonoBehaviour
             else{
                 messageLabel.text = "COMPLETE";
                 CamAlarm alarm = cam.GetComponent<CamAlarm>();
+                Debug.Log("Device: " + device);
+                alarm.StopAllarm();
                 alarm.enabled = false;
                 complete = true;
             }

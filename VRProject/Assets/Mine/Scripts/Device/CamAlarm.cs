@@ -13,6 +13,8 @@ public class CamAlarm : MonoBehaviour
     private float startTime = -1;
     private float seconds = 0;
 
+    private bool playAllarm = true;
+
     // Start is called before the first frame update
     void Start(){}
 
@@ -34,13 +36,19 @@ public class CamAlarm : MonoBehaviour
         startTime = UnityEngine.Time.time;
         alarm = true;
 
-        AudioManager.instance.Play("alarm2");
+        if(playAllarm == true){
+            AudioManager.instance.Play("alarm2");
+        }
     }
 
     void OnTriggerExit(Collider col){
         startTime = -1;
         alarm = false;
         AudioManager.instance.Stop("alarm2");
+    }
+
+    public void StopAllarm(){
+        playAllarm = false;
     }
 
 }
