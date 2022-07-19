@@ -30,7 +30,6 @@ public class Grenade : MonoBehaviour
     {
         if (GameEvent.isPaused)
         {
-            AudioManager.instance.Stop("gas leak");
             return;
 
         }
