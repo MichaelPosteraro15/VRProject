@@ -7092,6 +7092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorParent
       objectReference: {fileID: 0}
+    - target: {fileID: 471960328415450036, guid: 179a85f3638585242950428c0a8108c5, type: 3}
+      propertyPath: m_Size.x
+      value: 8.28
+      objectReference: {fileID: 0}
     - target: {fileID: 471960328415450038, guid: 179a85f3638585242950428c0a8108c5, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7624,7 +7628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571162135629841602, guid: 303a5d202056de04d8582d04d750665e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.44
+      value: -10.57
       objectReference: {fileID: 0}
     - target: {fileID: 2571162135629841602, guid: 303a5d202056de04d8582d04d750665e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12926,6 +12930,10 @@ PrefabInstance:
     - target: {fileID: 3980846027687536446, guid: 424622fb2f5ecf54b87e7c616e7ec1dd, type: 3}
       propertyPath: m_Name
       value: pc
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980846027687536446, guid: 424622fb2f5ecf54b87e7c616e7ec1dd, type: 3}
+      propertyPath: m_TagString
+      value: Computer
       objectReference: {fileID: 0}
     - target: {fileID: 4356422241217904004, guid: 424622fb2f5ecf54b87e7c616e7ec1dd, type: 3}
       propertyPath: m_RootOrder
