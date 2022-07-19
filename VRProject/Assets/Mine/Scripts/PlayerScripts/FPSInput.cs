@@ -70,7 +70,7 @@ public class FPSInput : MonoBehaviour
             Debug.Log("corre");
             isRunning = true;   
             speed = 17.0f;
-            animator.speed = 2.0f;
+            animator.speed = 1.5f;
 
             //blocco suono cammino e starto corsa questo solo la prima volta
             if (!soundrunningPlay)
