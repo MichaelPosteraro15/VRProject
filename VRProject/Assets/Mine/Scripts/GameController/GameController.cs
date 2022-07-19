@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     private bool goal2 = false;
 
     //Variabile che mi tiene conto del livello attuale
-    private int level = 5;
+    private int level = 1;
 
     //Variabile per capire se il gioco é finito.
     private bool gameOver = false;
@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
         if(goal1 == true && goal2 == true){
             hud.GetComponent<HUD>().OpenWinCanvas();
             if(Input.GetKeyDown("space")){
-                StartGame();
+                QuitGame();
             }
         }
 

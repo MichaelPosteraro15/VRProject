@@ -6,13 +6,16 @@ public class AllarmButton : MonoBehaviour
 {
     [SerializeField] private PasswordScreen screen;
     [SerializeField] private string password;
-
-    //[SerializeField] private GameController gameController; 
+    [SerializeField] private GameController gameController;
 
     bool enabled = true;
+
+    bool onTrigger = false;
     
     public void OnMouseDown(){
-        screen.Open();
+        if(onTrigger == true){
+            screen.Open();
+        }
     }
 
     // Start is called before the first frame update
@@ -31,8 +34,19 @@ public class AllarmButton : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col){
+        if(col.tag == "Player"){
+            onTrigger = true;
+        }
+
         if(enabled == true && col.tag == "Enemy"){
-            //gameController.GameOver();
+            gameController.GameOver();
+            AudioManager.instance.Play("alarm2");
+        }
+    }
+
+    void OnTriggerExit(Collider col){
+        if(col.tag == "Player"){
+            onTrigger = false;
         }
     }
 }
