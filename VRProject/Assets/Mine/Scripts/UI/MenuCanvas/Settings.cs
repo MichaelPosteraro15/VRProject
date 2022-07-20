@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Settings : MonoBehaviour
 {
+
+    public AudioMixerGroup musicMixer;
     public void SetScreen(int fullScreen)
     {
         if (fullScreen == 1)
@@ -25,5 +28,10 @@ public class Settings : MonoBehaviour
         QualitySettings.SetQualityLevel(quality);
         Debug.Log(quality);
 
+    }
+
+    public void setVolume(float value)
+    {
+        musicMixer.audioMixer.SetFloat("Music volume",value);
     }
 }

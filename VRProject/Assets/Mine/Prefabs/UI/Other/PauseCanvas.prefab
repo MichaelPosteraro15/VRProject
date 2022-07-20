@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f0994d06e513446934546b68b590e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixer: {fileID: -8240810800186854478, guid: c25e11c967cd94e4dbfc20c0c1187077, type: 2}
 --- !u!114 &1624736890411183361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4375,13 +4376,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1624736889542670130}
   m_HandleRect: {fileID: 1624736890417765076}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -20
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.322
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 218245900}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: setVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1624736889937047703
 GameObject:
   m_ObjectHideFlags: 0
