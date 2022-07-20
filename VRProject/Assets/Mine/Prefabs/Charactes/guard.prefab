@@ -1250,9 +1250,10 @@ GameObject:
   - component: {fileID: 2757802355626610157}
   - component: {fileID: 2757802357185044459}
   - component: {fileID: 2757802357185044458}
+  - component: {fileID: -6253214998919701008}
   m_Layer: 0
   m_Name: guard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1331,12 +1332,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   alarmButton: {fileID: 0}
-  forwardRange: 60
+  forwardRange: 50
   dirRange: 40
-  rangeForEscape: 40
+  rangeForEscape: 60
   agent: {fileID: 2757802357185044459}
   destinations:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  radius: 3
+--- !u!114 &-6253214998919701008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2757802355617430649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6806e6cf50892634a9d58a09671d0215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLabel: {fileID: 0}
+  deviceLabel: {fileID: 0}
+  phaseLabel: {fileID: 0}
+  device: 

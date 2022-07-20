@@ -11,9 +11,12 @@ public class EnemyMovement : MonoBehaviour
     public float forwardRange;      //raggio visivo in avanti della guardia
     public float dirRange;          //raggio visivo ai lati
     public float rangeForEscape;    //distanza massima entro quale la guardia inseguirà il player
+
+   
+
     private bool alert;             //la guardia è in stato di allerta
     private bool alarm;             //la guardia sta correndo a dare l'allarme
-    private Animator animator;      //gestore animazioni
+    public Animator animator;      //gestore animazioni
     public NavMeshAgent agent;      
     public Transform[] destinations;    //punti di pattuglia
     private int destPoint=0;
@@ -137,6 +140,11 @@ public class EnemyMovement : MonoBehaviour
         }
         if (alert) { agent.speed = agent.speed * 2; }
     }
-    
+
+    public bool isShooting()
+    {
+        return true;
+    }
+
 
 }
