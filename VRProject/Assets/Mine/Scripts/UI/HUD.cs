@@ -30,8 +30,6 @@ public class HUD : MonoBehaviour
         WinCanvas.SetActive(true);
         WinCanvas.GetComponent<WinCanvas>().WinScene();
 
-        Debug.Log("OK");
-
         GameObject popupCanvas = transform.Find("PauseCanvas").gameObject;
         popupCanvas.SetActive(false);
     }

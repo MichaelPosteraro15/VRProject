@@ -13,8 +13,6 @@ public class CamAlarm : MonoBehaviour
     private float startTime = -1;
     private float seconds = 0;
 
-    private bool playAllarm = true;
-
     // Start is called before the first frame update
     void Start(){}
 
@@ -24,7 +22,7 @@ public class CamAlarm : MonoBehaviour
         time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0;
         seconds = time % 60;
 
-        if(alarm == true){ Debug.Log(seconds); }
+        //if(alarm == true){ Debug.Log(seconds); }
 
         if(seconds > 2.5 && alarm == true){
             gameController.GameOver();
@@ -33,10 +31,11 @@ public class CamAlarm : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col){
-        startTime = UnityEngine.Time.time;
-        alarm = true;
 
-        if(playAllarm == true){
+        if(col.tag == "Player"){
+            startTime = UnityEngine.Time.time;
+            alarm = true;
+
             AudioManager.instance.Play("alarm2");
         }
     }
@@ -48,7 +47,8 @@ public class CamAlarm : MonoBehaviour
     }
 
     public void StopAllarm(){
-        playAllarm = false;
+        BoxCollider collider = GetComponent<BoxCollider>();
+        collider.size = new Vector3(0,0,0);
     }
 
 }
