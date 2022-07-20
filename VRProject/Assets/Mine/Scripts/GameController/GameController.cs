@@ -39,9 +39,12 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame(){
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 1f;
+        */
+        GameEvent.isPaused = false;
         SceneManager.LoadScene(1);
 
         gameOver = false;

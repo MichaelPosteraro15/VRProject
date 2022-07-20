@@ -37,7 +37,7 @@ public class AllarmButton : MonoBehaviour
         if(col.tag == "Player"){
             onTrigger = true;
         }
-
+        Debug.Log(col.tag);
         if(enabled == true && col.tag == "Enemy"){
             gameController.GameOver();
             AudioManager.instance.Play("alarm2");
