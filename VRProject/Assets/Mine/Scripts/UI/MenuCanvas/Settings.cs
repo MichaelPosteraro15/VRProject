@@ -23,7 +23,7 @@ public class Settings : MonoBehaviour
     public void SetQuality(int quality)
     {
         QualitySettings.SetQualityLevel(quality);
-        Debug.Log(quality+1);
+        Debug.Log(quality);
 
     }
 }

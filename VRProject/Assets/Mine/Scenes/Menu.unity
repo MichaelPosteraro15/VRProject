@@ -860,14 +860,20 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 1348645965}
   m_ItemImage: {fileID: 0}
-  m_Value: 3
+  m_Value: 5
   m_Options:
     m_Options:
+    - m_Text: VERY LOW
+      m_Image: {fileID: 0}
     - m_Text: LOW
       m_Image: {fileID: 0}
     - m_Text: MEDIUM
       m_Image: {fileID: 0}
     - m_Text: HIGH
+      m_Image: {fileID: 0}
+    - m_Text: VERY HIGH
+      m_Image: {fileID: 0}
+    - m_Text: ULTRA
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2578,7 +2584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIGH
+  m_Text: ULTRA
 --- !u!222 &1029163203
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3421,7 +3427,7 @@ AudioSource:
   m_GameObject: {fileID: 1465176698}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8240810800186854478, guid: c25e11c967cd94e4dbfc20c0c1187077, type: 2}
   m_audioClip: {fileID: 8300000, guid: b5398e69c955d7b448cc502334d82cd1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.096
