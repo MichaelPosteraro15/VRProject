@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 //audioManager ci permette facilmente di accedere ai suoni inseriti nell'array
@@ -7,6 +8,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;
+	[SerializeField] private AudioMixerGroup musicMixer;
+	[SerializeField] private AudioMixerGroup effectsMixer;
 
 	[Range(0f, 1f)]
 	public static float volume;
@@ -32,7 +35,19 @@ public class AudioManager : MonoBehaviour {
 			s.source.volume = s.volume;
 			s.source.pitch = s.pitch;
 			s.source.loop = s.loop;
+
+			if (s.type == Sound.Type.music)
+            {
+				s.source.outputAudioMixerGroup = musicMixer;
+            }
+            else
+            {
+				s.source.outputAudioMixerGroup = effectsMixer;
+
+			}
 		}
+
+		
 	}
 
 	//il metodo play va a ricercare il suono nell'array e successivamente fa partire la clipaudio

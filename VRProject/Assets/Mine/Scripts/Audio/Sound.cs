@@ -4,7 +4,8 @@
 
 //classe che ci permette di gestire una clipAudio
 public class Sound {
-
+	public enum Type { music,effects};
+	public Type type;
 	public string name;
 
 	public AudioClip clip;
