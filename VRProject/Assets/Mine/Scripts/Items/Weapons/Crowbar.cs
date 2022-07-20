@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crowbar : MonoBehaviour
+public class Crowbar : Weapon
 {
 
-    public Transform cam;
-    public float distance = 5;
-    public float impact = 120;
-
-    //danno che fa ai nemici
-    public float damage = WeaponsDamage.CROWBAR;
-    public Animator animator;
-
-
+    
     void Start()
-    { }
+    { 
+        damage = WeaponsDamage.CROWBAR;
+        distance = 5;
+        impact = 120;
+
+    }
 
 
     void Update()
@@ -25,14 +22,14 @@ public class Crowbar : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            Shoot();
+            _shoot();
             Debug.Log("colpisce");
         }
 
     }
 
 
-    private void Shoot()
+    public override void _shoot()
     {
         RaycastHit hit;
         animator.Play("knifeShot");

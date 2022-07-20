@@ -3,22 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //quando le mani sono vuote il player può tirare pugni
-public class Empty : MonoBehaviour
+public class Empty : Weapon
 {
 
-    public Transform cam;
-    public float distance = 1;
-    public float impact = 60;
-
-    //danno che fa ai nemici con il pugno
-    public float damage = WeaponsDamage.PUNCH;
-    public Animator animator;
 
     void Start()
     {
-
-
-        
+        distance = 1;
+        impact = 60;
+        damage = WeaponsDamage.PUNCH;
     }
 
 
@@ -29,14 +22,15 @@ public class Empty : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            Shoot();
+            _shoot();
         }
 
     }
 
 
     //metodo che gestisce quando avviene il colpo
-    private void Shoot()
+
+    public override void _shoot()
     {
         RaycastHit hit;
         //AudioManager.instance.Play();
@@ -53,6 +47,4 @@ public class Empty : MonoBehaviour
 
         }
     }
-
-
 }
