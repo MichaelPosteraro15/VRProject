@@ -18,7 +18,7 @@ public class Sound {
 	public bool loop = false;
 
 	[HideInInspector]
-	public AudioSource source;
+	public AudioSource source; //audioSource ci permette di riprodurre l'audioclip
 
 	public void setVolume(float volume)
     {

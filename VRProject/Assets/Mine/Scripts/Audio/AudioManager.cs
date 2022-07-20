@@ -61,6 +61,7 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
+	//stoppa tutte le musiche
 	public void StopAll()
 	{
 		foreach (Sound s in sounds)
@@ -69,6 +70,7 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	//mette in pausa tutte le musiche
 	public void PauseAll()
 	{
 		foreach (Sound s in sounds)
@@ -78,6 +80,7 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	//mette setta la pausa del listner
 	public void setListnerPause(bool v)
 	{
 		AudioListener.pause = v;
