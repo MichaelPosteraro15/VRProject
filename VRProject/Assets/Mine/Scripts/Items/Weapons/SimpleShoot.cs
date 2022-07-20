@@ -4,27 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
-public class SimpleShoot : MonoBehaviour
+public class SimpleShoot : Weapon
 {
     //riferimenti
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
-    public Transform cam;
 
     public int maxAmmo = 20;
     public int currentAmmo;
-    
-    public float distance = 25;//distanza da cui puo colpire
-    public float impact = 150;
 
-    //danno che fa ai nemici
-    public float damage = WeaponsDamage.GUN;
+
 
 
     public GameObject impactEffect;
-    public Animator animator;
 
 
     [Header("Location Refrences")]
@@ -40,7 +34,12 @@ public class SimpleShoot : MonoBehaviour
 
     void Start()
     {
-        
+        distance = 25;//distanza da cui puo colpire
+        damage = WeaponsDamage.GUN;
+        impact = 150;
+        distance = 25;//distanza da cui puo colpire
+
+        //numero di proiettili  con cui partire
         currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
@@ -87,7 +86,7 @@ public class SimpleShoot : MonoBehaviour
 
 
     //Metodo che gestisce cosa avviene al colpo
-    private void _shoot()
+    public override void _shoot()
     {
         //parte clip audio fire
         AudioManager.instance.Play("Fire");
