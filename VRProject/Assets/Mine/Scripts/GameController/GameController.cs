@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1f;
+        AudioManager.instance.setListnerPause(false);
         SceneManager.LoadScene(0);
     }
 
