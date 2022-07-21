@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,12 @@ public class FPSInput : MonoBehaviour
     private bool isRunning = false;
     private bool isWalking = false;
 
+    public GameController GameController;
+
+    public void die()
+    {
+        GameController.GameOver();
+    }
 
     //aggiungo un animazione al player, ANIMATOR CONTENUTO IN ARMS
     public Animator animator;
