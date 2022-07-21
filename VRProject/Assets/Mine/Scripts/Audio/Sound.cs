@@ -17,6 +17,7 @@ public class Sound {
 	public float pitch;
 
 	public bool loop = false;
+	public bool playOnAwake = false;
 
 	[HideInInspector]
 	public AudioSource source; //audioSource ci permette di riprodurre l'audioclip
