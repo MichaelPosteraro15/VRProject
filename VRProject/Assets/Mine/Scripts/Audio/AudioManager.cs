@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+
 
 
 //audioManager ci permette facilmente di accedere ai suoni inseriti nell'array
@@ -30,8 +32,9 @@ public class AudioManager : MonoBehaviour,IGameManager {
 		else
 		{
 			instance = this;
-			DontDestroyOnLoad(gameObject);
 		}
+		DontDestroyOnLoad(gameObject);
+
 
 		//scorriamo tutti i suoni e li inizializziamo
 		foreach (Sound s in sounds)
@@ -43,21 +46,44 @@ public class AudioManager : MonoBehaviour,IGameManager {
 			s.source.loop = s.loop;
 
 
-			//associamo ogni suono ad un mixer in base alla tipologia 
+			//associamo ogni suono ad un mixer in base alla tipologia del suono stesso
 			if (s.type == Sound.Type.music)
 			{
+				//se il suono è di tipologia music allora verrà associato al musicMixer
 				s.source.outputAudioMixerGroup = musicMixer;
 			}
 			else
 			{
+				//se il suono è di tipologia effect allora verrà associato al effectsMixer
 				s.source.outputAudioMixerGroup = effectsMixer;
 
 			}
+
+			//facciamo partire le musiche di sottofondo che saranno diverse in base alla scena in
+			//cui ci troviamo
+            if (s.playOnAwake)
+            {
+				if (SceneManager.GetActiveScene().name == "Menu" && s.name== "menuMusic2")
+					s.source.Play();
+				else if (SceneManager.GetActiveScene().name != "Menu" && s.name == "gameMusic")
+
+				{
+					s.source.Play();
+
+				}
+
+
+			}
+
 		}
+		Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
+
+
+
 
 	}
 
-	
+
 
 
 

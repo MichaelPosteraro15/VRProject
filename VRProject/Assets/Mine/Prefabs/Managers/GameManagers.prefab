@@ -195,7 +195,7 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
-    playOnAwake: 0
+    playOnAwake: 1
     source: {fileID: 0}
   - type: 0
     name: menuMusic2
@@ -203,9 +203,9 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
-    playOnAwake: 0
+    playOnAwake: 1
     source: {fileID: 0}
-  - type: 0
+  - type: 1
     name: alert
     clip: {fileID: 8300000, guid: 5db1052327b4ed3458d194a803bc0ce3, type: 3}
     volume: 0.509
