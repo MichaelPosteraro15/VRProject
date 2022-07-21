@@ -5,11 +5,14 @@ using UnityEngine;
 //i managers sono richiesti obligatoriamente
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(InventoryManager))]
+[RequireComponent(typeof(AudioManager))]
 
 public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; }
     public static InventoryManager Inventory { get; private set; }
+    public static AudioManager Audio { get; private set; }
+
     private List<IGameManager> _startSequence;
 
     //awake è un metodo fornito da MonoBehaviour, eseguito ancor prima di start
@@ -18,13 +21,16 @@ public class Managers : MonoBehaviour
     {
         Player = GetComponent<PlayerManager>();
         Inventory = GetComponent<InventoryManager>();
+        Audio = GetComponent<AudioManager>();
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
         _startSequence.Add(Inventory);
+        _startSequence.Add(Audio);  
+
         StartCoroutine(StartupManagers());
     }
 
-    //courotine che starta i manager 
+    //courotine che starta tutti i manager passatogli
     private IEnumerator StartupManagers()
     {
         foreach (IGameManager manager in _startSequence)

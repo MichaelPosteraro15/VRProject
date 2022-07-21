@@ -23,7 +23,6 @@ public class FPSInput : MonoBehaviour
     void Start()
     {
         _charController = GetComponent<CharacterController>();
-        AudioManager.instance.Play("gameMusic");
     }
 
     // Update is called once per frame
