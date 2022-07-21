@@ -60,7 +60,6 @@ public class FPSInput : MonoBehaviour
         //se tiene premuto q allora correrà
         if ((deltaX != 0 || deltaZ != 0) && Input.GetKey(KeyCode.Q))
         {
-            Debug.Log("corre");
             isRunning = true;   
             speed = 17.0f;
             animator.speed = 1.7f;
