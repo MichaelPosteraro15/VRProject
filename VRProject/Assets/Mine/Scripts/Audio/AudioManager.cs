@@ -1,12 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+
 
 
 //audioManager ci permette facilmente di accedere ai suoni inseriti nell'array
 //i principali metodi che possiamo usare sono play e stop
-public class AudioManager : MonoBehaviour {
+public class AudioManager : MonoBehaviour,IGameManager {
+	public ManagerStatus status { get; private set; }
 
 	public static AudioManager instance;
+	[SerializeField] private AudioMixerGroup musicMixer;
+	[SerializeField] private AudioMixerGroup effectsMixer;
 
 	[Range(0f, 1f)]
 	public static float volume;
@@ -14,17 +20,23 @@ public class AudioManager : MonoBehaviour {
 	//array di suoni che possiamo usare quando vogliamo,tramite tale classe
 	public Sound[] sounds;
 
-	void Start ()
+	public void Startup()
 	{
+		Debug.Log("Audio manager starting...");
+		status = ManagerStatus.Started;
+
 		if (instance != null)
 		{
 			Destroy(gameObject);
-		} else
+		}
+		else
 		{
 			instance = this;
-			DontDestroyOnLoad(gameObject);
 		}
+		DontDestroyOnLoad(gameObject);
 
+
+		//scorriamo tutti i suoni e li inizializziamo
 		foreach (Sound s in sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();
@@ -32,8 +44,48 @@ public class AudioManager : MonoBehaviour {
 			s.source.volume = s.volume;
 			s.source.pitch = s.pitch;
 			s.source.loop = s.loop;
+
+
+			//associamo ogni suono ad un mixer in base alla tipologia del suono stesso
+			if (s.type == Sound.Type.music)
+			{
+				//se il suono è di tipologia music allora verrà associato al musicMixer
+				s.source.outputAudioMixerGroup = musicMixer;
+			}
+			else
+			{
+				//se il suono è di tipologia effect allora verrà associato al effectsMixer
+				s.source.outputAudioMixerGroup = effectsMixer;
+
+			}
+
+			//facciamo partire le musiche di sottofondo che saranno diverse in base alla scena in
+			//cui ci troviamo
+            if (s.playOnAwake)
+            {
+				if (SceneManager.GetActiveScene().name == "Menu" && s.name== "menuMusic2")
+					s.source.Play();
+				else if (SceneManager.GetActiveScene().name != "Menu" && s.name == "gameMusic")
+
+				{
+					s.source.Play();
+
+				}
+
+
+			}
+
 		}
+		Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
+
+
+
+
 	}
+
+
+
+
 
 	//il metodo play va a ricercare il suono nell'array e successivamente fa partire la clipaudio
 	public void Play (string sound)
@@ -61,6 +113,7 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
+	//stoppa tutte le musiche
 	public void StopAll()
 	{
 		foreach (Sound s in sounds)
@@ -69,6 +122,7 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	//mette in pausa tutte le musiche
 	public void PauseAll()
 	{
 		foreach (Sound s in sounds)
@@ -78,12 +132,12 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	//mette setta la pausa del listner
 	public void setListnerPause(bool v)
 	{
 		AudioListener.pause = v;
 		
 	}
 
-
-
+   
 }

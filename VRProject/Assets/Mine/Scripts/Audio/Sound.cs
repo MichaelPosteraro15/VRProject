@@ -4,7 +4,8 @@
 
 //classe che ci permette di gestire una clipAudio
 public class Sound {
-
+	public enum Type { music,effects};
+	public Type type;
 	public string name;
 
 	public AudioClip clip;
@@ -16,9 +17,10 @@ public class Sound {
 	public float pitch;
 
 	public bool loop = false;
+	public bool playOnAwake = false;
 
 	[HideInInspector]
-	public AudioSource source;
+	public AudioSource source; //audioSource ci permette di riprodurre l'audioclip
 
 	public void setVolume(float volume)
     {

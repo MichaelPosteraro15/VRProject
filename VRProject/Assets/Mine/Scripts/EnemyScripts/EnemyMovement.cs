@@ -123,6 +123,8 @@ public class EnemyMovement : MonoBehaviour
             if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
             {
                 Debug.Log("T'ha visto");
+                //parte il suono d'allerta
+                AudioManager.instance.Play("alert");
                 alert = true;
             }
 
@@ -134,6 +136,7 @@ public class EnemyMovement : MonoBehaviour
             if (hit.distance < distance && hitObject.GetComponent<FPSInput>())
             {
                 Debug.Log("T'ha visto");
+                AudioManager.instance.Play("alert");   
                 alert = true;
             }
 
