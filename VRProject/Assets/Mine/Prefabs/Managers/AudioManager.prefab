@@ -52,6 +52,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: knife
@@ -59,6 +60,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 0
     name: gas leak
@@ -66,6 +68,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: airHit
@@ -73,6 +76,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: crowbarShoot
@@ -80,6 +84,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: walk
@@ -87,6 +92,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: alarm1
@@ -94,6 +100,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: alarm2
@@ -101,6 +108,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: reloadGun
@@ -108,6 +116,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 0
     name: footsteps
@@ -115,6 +124,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: footsteps2
@@ -122,6 +132,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: footsteps3
@@ -129,6 +140,7 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 1
     name: footstepsx1
@@ -136,6 +148,7 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 0
     name: gameMusic
@@ -143,6 +156,7 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
+    playOnAwake: 0
     source: {fileID: 0}
   - type: 0
     name: menuMusic2
@@ -150,4 +164,13 @@ MonoBehaviour:
     volume: 0.509
     pitch: 1
     loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: alert
+    clip: {fileID: 8300000, guid: 5db1052327b4ed3458d194a803bc0ce3, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
