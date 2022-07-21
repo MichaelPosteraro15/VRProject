@@ -34,34 +34,46 @@ public class EnemyDevice : MonoBehaviour
         time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0;
         seconds = time % 60;
 
+        /*
         if(Input.GetMouseButtonDown(0) && isTriggered == true){
             isClicked = true;
             deviceLabel.text = device;
             phaseLabel.text = "Connection....";
             phaseLabel.color = Color.red;
-            Debug.Log("OK");
+            Debug.Log("FUNZIONA");
+        }
+        */
+
+        if(isClicked == true){
+            timerLabel.text = string.Format ("{0:00}", seconds);
+            if (Input.GetMouseButtonDown(0)){
+                if(isDragged == false){ startTime = UnityEngine.Time.time; isDragged = true;}
+            }
+            else if (Input.GetMouseButtonUp(0) || isTriggered == false){
+                isClicked = false;
+                isDragged = false;
+                startTime = -1;
+                timerLabel.text = string.Format ("{0:00}", 0);
+            }
+
+            if(seconds > 10){
+                time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
+                startTime = -1;
+                phaseLabel.text = "COMPLETE";
+                phaseLabel.color = Color.green;
+                broken = true;
+            }
         }
 
-        if(isClicked == true){ timerLabel.text = string.Format ("{0:00}", seconds); }
-         
-        if (Input.GetMouseButtonDown(0) && isClicked == true){
-            if(isDragged == false){ startTime = UnityEngine.Time.time; isDragged = true; }
-        }
-        else if (Input.GetMouseButtonUp(0) || isTriggered == false){
-            isClicked = false;
-            isDragged = false;
-            startTime = -1;
-            timerLabel.text = string.Format ("{0:00}", 0);
-        }
+    }
 
-        if(seconds > 20){
-            time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
-            startTime = -1;
-            phaseLabel.text = "COMPLETE";
-            phaseLabel.color = Color.green;
-            broken = true;
+    void OnMouseDown(){
+        if(isTriggered == true){
+            isClicked = true;
+            deviceLabel.text = device;
+            phaseLabel.text = "Connection....";
+            phaseLabel.color = Color.red;
         }
-
     }
 
     void OnTriggerEnter(Collider col){
@@ -71,6 +83,8 @@ public class EnemyDevice : MonoBehaviour
     }
 
     void OnTriggerExit(Collider col){
-        isTriggered = false;
+        if(col.tag == "Player"){
+            isTriggered = false;
+        }
     }
 }

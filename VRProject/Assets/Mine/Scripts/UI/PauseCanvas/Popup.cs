@@ -32,7 +32,6 @@ public class Popup : MonoBehaviour
 
         //setto a false la pause del listner cosi i suoni torneranno a sentirsi
         AudioManager.instance.setListnerPause(false);
-
     }
 
     public void LockMouse(){
