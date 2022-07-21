@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     private bool goal2 = false;
 
     //Variabile che mi tiene conto del livello attuale
-    private int level = 1;
+    private static int level = 1;
 
     //Variabile per capire se il gioco é finito.
     private bool gameOver = false;
@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
         if(goal1 == true && goal2 == true){
             hud.GetComponent<HUD>().OpenWinCanvas();
             if(Input.GetKeyDown("space")){
-                QuitGame();
+                Restart();
             }
         }
 
@@ -39,11 +39,6 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame(){
-        /*
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        Time.timeScale = 1f;
-        */
         GameEvent.isPaused = false;
         SceneManager.LoadScene(1);
 
@@ -63,6 +58,10 @@ public class GameController : MonoBehaviour
     public void GameOver(){
         gameOver = true; 
         hud.GetComponent<HUD>().OpenGameOverCanvas();
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene(level);
     }
 
     //Setto goal1 a true se ho raggiunto il primo obiettivo
