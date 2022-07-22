@@ -28,7 +28,6 @@ public class GameController : MonoBehaviour
         if(goal1 == true && goal2 == true){
             hud.GetComponent<HUD>().OpenWinCanvas();
             if(Input.GetKeyDown("space")){
-                Managers.Audio.Stop("homeMusic");
                 Restart();
             }
         }
