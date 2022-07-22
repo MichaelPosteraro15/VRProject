@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     private static bool goal2 = false;
 
     //Variabile che mi tiene conto del livello attuale
-    private static int level = 0;
+    private static int level = 1;
 
     //Variabile per capire se il gioco é finito.
     private bool gameOver = false;
