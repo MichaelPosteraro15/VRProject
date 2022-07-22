@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyDevice : MonoBehaviour
+public class BossDevice : MonoBehaviour
 {
     [SerializeField] private Text timerLabel;
     [SerializeField] private Text deviceLabel;
     [SerializeField] private Text phaseLabel;
+    [SerializeField] private GameController gameController;
 
     [SerializeField] private string device;
 
@@ -19,9 +20,7 @@ public class EnemyDevice : MonoBehaviour
     private bool isClicked = false; 
     private bool isDragged = false;
     private bool isHacking = false;
-    private bool broken = false;
-    private bool isTriggered = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +38,7 @@ public class EnemyDevice : MonoBehaviour
             if (Input.GetMouseButtonDown(0)){
                 if(isDragged == false){ startTime = UnityEngine.Time.time; isDragged = true;}
             }
-            else if (Input.GetMouseButtonUp(0) || isTriggered == false){
+            else if (Input.GetMouseButtonUp(0)){
                 isClicked = false;
                 isDragged = false;
                 startTime = -1;
@@ -51,35 +50,17 @@ public class EnemyDevice : MonoBehaviour
                 startTime = -1;
                 phaseLabel.text = "COMPLETE";
                 phaseLabel.color = Color.green;
-                broken = true;
+                gameController.ReachGoal2();
             }
         }
 
     }
 
     void OnMouseDown(){
-        if(isTriggered == true){
-            isClicked = true;
-            deviceLabel.text = device;
-            phaseLabel.text = "Connection....";
-            phaseLabel.color = Color.red;
-        }
+        isClicked = true;
+        deviceLabel.text = device;
+        phaseLabel.text = "Connection....";
+        phaseLabel.color = Color.red;
     }
 
-    void OnTriggerEnter(Collider col){
-        if(col.tag == "Player"){
-            isTriggered = true;
-        }
-    }
-
-    void OnTriggerExit(Collider col){
-        if(col.tag == "Player"){
-            isTriggered = false;
-        }
-    }
-
-    public bool isBroken()
-    {
-        return broken;
-    }
 }

@@ -75,4 +75,13 @@ public class GameController : MonoBehaviour
         level+=1;
         SceneManager.LoadScene(level); 
     }
+
+    public int GetLevel(){
+        return level;
+    }
+
+    public bool GetReach1(){
+        return goal1;
+    }
+
 }
