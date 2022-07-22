@@ -65,8 +65,8 @@ public class AudioManager : MonoBehaviour,IGameManager {
             {
 				if (SceneManager.GetActiveScene().name == "Menu" && s.name== "menuMusic2")
 					s.source.Play();
-				else if (SceneManager.GetActiveScene().name != "Menu" && s.name == "gameMusic")
-
+				else if (SceneManager.GetActiveScene().name != "Menu" && s.name == "homeMusic")
+						
 				{
 					s.source.Play();
 

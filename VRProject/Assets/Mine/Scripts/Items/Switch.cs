@@ -104,7 +104,7 @@ public class Switch : MonoBehaviour
         //prendo il nome dell'oggetto che possiede in mano attualmente
         string obName = transform.GetChild(selectOb).gameObject.name;
 
-        /* SE GLI OGGETTI NON SONO NELL'INVENTARIO ALLORA NON SARANNO DISPONIBILI
+        // SE GLI OGGETTI NON SONO NELL'INVENTARIO ALLORA NON SARANNO DISPONIBILI
         if (obName == "Gun" && Managers.Inventory.GetItemCount("gun") == 0)
         {
             if (less)
@@ -148,7 +148,7 @@ public class Switch : MonoBehaviour
 
         }
 
-        */
+        
 
 
 

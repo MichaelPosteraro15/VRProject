@@ -213,3 +213,35 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - type: 1
+    name: enemyHit
+    clip: {fileID: 8300000, guid: 391f772aa453e8948a3be6f782fadac8, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: enemyKnife
+    clip: {fileID: 8300000, guid: 369595a0cee0dde4582acde75e4fc3d2, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: enemyPunch
+    clip: {fileID: 8300000, guid: a03670f1c70c2bf4aaf1c37d5a21e56d, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: homeMusic
+    clip: {fileID: 8300000, guid: e16d00148d178c748ad4d98edc92c59a, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}

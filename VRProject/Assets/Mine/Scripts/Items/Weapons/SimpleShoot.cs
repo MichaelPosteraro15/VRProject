@@ -110,15 +110,21 @@ public class SimpleShoot : Weapon
 
             ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
             if (target!=null)
-            { target.react(WeaponsDamage.GUN); }
+            { target.react(WeaponsDamage.GUN);
+               Managers.Audio.Play("enemyHit");
+            }
 
-            //effetto del proiettile  su ciò che è stato colpito
-            Quaternion impactR = Quaternion.LookRotation(hit.normal);
-            GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
-            
-            //mettiamo come genitore l'oggetto colpito
-            _impact.transform.parent = hit.transform;
-            Destroy(_impact, 4);
+            if (target == null)
+            {
+
+                //effetto del proiettile  su ciò che è stato colpito
+                Quaternion impactR = Quaternion.LookRotation(hit.normal);
+                GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
+
+                //mettiamo come genitore l'oggetto colpito
+                _impact.transform.parent = hit.transform;
+                Destroy(_impact, 4);
+            }
         }
     }
 
