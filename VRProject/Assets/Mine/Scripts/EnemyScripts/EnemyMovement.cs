@@ -12,6 +12,9 @@ public class EnemyMovement : MonoBehaviour
     public Transform alarmButton;   //posizione bottone allarme
     public float forwardRange;      //raggio visivo in avanti della guardia
     public float dirRange;          //raggio visivo ai lati
+
+    
+
     public float rangeForEscape;    //distanza massima entro quale la guardia inseguirà il player
     private bool alert;             //la guardia è in stato di allerta
 
@@ -24,14 +27,7 @@ public class EnemyMovement : MonoBehaviour
     private int destPoint = 0;
     public float radius;
 
-    public void wakeup()
-    {
-        agent.isStopped = false;
-        agent.SetDestination(player.position);
-        alert = true;
-        animator.Play("assault_combat_run");
-
-    }
+   
 
     private float TimePassed;
     private EnemyDevice _device;
@@ -128,6 +124,19 @@ public class EnemyMovement : MonoBehaviour
         _bullet.transform.rotation = transform.rotation;
         AudioManager.instance.Play("Fire");
 
+    }
+
+    public void wakeup()
+    {
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+        alert = true;
+        animator.Play("assault_combat_run");
+
+    }
+    public void Setalert(bool v)
+    {
+        alert = v;
     }
 
     public void dieAnimation()

@@ -21,6 +21,8 @@ public class ReactiveTarget : MonoBehaviour
     public void react(float damage)
     {
         life = life-damage;
+        EnemyMovement enemy = GetComponent<EnemyMovement>();
+        enemy.Setalert(true);
         if (life<0)
         { StartCoroutine(Die()); }
         else
