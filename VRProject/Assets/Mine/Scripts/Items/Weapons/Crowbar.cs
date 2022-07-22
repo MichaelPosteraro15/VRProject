@@ -38,6 +38,11 @@ public class Crowbar : Weapon
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
         {
+            GameObject hitObject = hit.transform.gameObject; //oggetto colpito
+            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+            if (target != null)
+            { target.react(damage); }
+
             //se ho colpito un oggetto che ha un rigidbody 
             if (hit.rigidbody != null)
             {

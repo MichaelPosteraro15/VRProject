@@ -96,15 +96,21 @@ public class SimpleShoot : Weapon
 
 
         RaycastHit hit;
+        
         //se abbiamo colpito un oggetto 
         if (Physics.Raycast(cam.position, cam.forward, out hit, distance))
         {
+            GameObject hitObject = hit.transform.gameObject; //oggetto colpito
             //se tale oggetto colpito è un rigidBody
             if (hit.rigidbody != null)
             {
                 //gli applico una forza
                 hit.rigidbody.AddForce(-hit.normal * impact);
             }
+
+            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+            if (target!=null)
+            { target.react(WeaponsDamage.GUN); }
 
             //effetto del proiettile  su ciò che è stato colpito
             Quaternion impactR = Quaternion.LookRotation(hit.normal);

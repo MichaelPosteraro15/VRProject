@@ -67,6 +67,10 @@ public class Grenade : MonoBehaviour
             GameObject _grenade = Instantiate(grenade, transform.position, transform.rotation);
             //gli applico una forza che lo fa muovere verso la direzione desiderata, simulando il lancio
             _grenade.GetComponent<Rigidbody>().AddForceAtPosition(ray.direction * range, hit.point, ForceMode.Force);
+            GameObject hitObject = hit.transform.gameObject; //oggetto colpito
+            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+            if (target != null)
+            { target.reactSleep(); }
         }
 
 

@@ -44,6 +44,11 @@ public class Empty : Weapon
                 hit.rigidbody.AddForce(-hit.normal * impact);
             }
 
+            GameObject hitObject = hit.transform.gameObject; //oggetto colpito
+            ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+            if (target != null)
+            { target.react(damage); }
+
 
         }
     }
