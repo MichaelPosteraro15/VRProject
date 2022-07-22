@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 //Serve anche a capire se il gioco é finito.
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private GameObject hud;
-    public FPSInput player;
+    [SerializeField] private GameObject hud = null;
+    public FPSInput player = null;
     //Variabili per capire se i due obiettivi sono stati raggiunti.
-    private bool goal1 = false;
-    private bool goal2 = false;
+    private static bool goal1 = false;
+    private static bool goal2 = false;
 
     //Variabile che mi tiene conto del livello attuale
-    private static int level = 1;
+    private static int level = 4;
 
     //Variabile per capire se il gioco é finito.
     private bool gameOver = false;
@@ -63,7 +63,9 @@ public class GameController : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene(level);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(0);
     }
 
     //Setto goal1 a true se ho raggiunto il primo obiettivo

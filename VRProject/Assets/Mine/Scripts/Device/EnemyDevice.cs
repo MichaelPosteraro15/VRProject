@@ -58,7 +58,7 @@ public class EnemyDevice : MonoBehaviour
     }
 
     void OnMouseDown(){
-        if(isTriggered == true){
+        if(isTriggered == true && CurrentItem.Instance.getCurrentItem() == "Pc"){
             isClicked = true;
             deviceLabel.text = device;
             phaseLabel.text = "Connection....";

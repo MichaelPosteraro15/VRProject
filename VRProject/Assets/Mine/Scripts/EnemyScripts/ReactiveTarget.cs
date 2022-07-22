@@ -47,7 +47,7 @@ public class ReactiveTarget : MonoBehaviour
     {
         EnemyMovement enemy = GetComponent<EnemyMovement>();
         enemy.dieAnimation();
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(120f);
         enemy.wakeup();
     }
 }
