@@ -18,6 +18,12 @@ public class DoorExit : MonoBehaviour
     }
 
     public void OnMouseDown(){
-        gameController.NextLevel();
+        if(gameController.GetLevel() == 5){ return; }
+        if(gameController.GetLevel() == 4){
+            if(gameController.GetReach1()){ gameController.NextLevel(); }
+        }
+        else{
+            gameController.NextLevel();
+        }
     }
 }
