@@ -14,12 +14,25 @@ public class EnemyMovement : MonoBehaviour
     public float dirRange;          //raggio visivo ai lati
     public float rangeForEscape;    //distanza massima entro quale la guardia inseguirà il player
     private bool alert;             //la guardia è in stato di allerta
+
+   private bool isSleeping;
+
     private bool alarm;             //la guardia sta correndo a dare l'allarme
     private Animator animator;      //gestore animazioni
     public NavMeshAgent agent;
     public Transform[] destinations;    //punti di pattuglia
     private int destPoint = 0;
     public float radius;
+
+    public void wakeup()
+    {
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+        alert = true;
+        animator.Play("assault_combat_run");
+
+    }
+
     private float TimePassed;
     private EnemyDevice _device;
     public Transform door;
@@ -109,11 +122,19 @@ public class EnemyMovement : MonoBehaviour
     }
     private void shoot()
     {
+        if (isSleeping) { return; }
         _bullet = Instantiate(_bulletPrefab) as GameObject;
         _bullet.transform.position = transform.TransformPoint(0,1,1);
         _bullet.transform.rotation = transform.rotation;
         AudioManager.instance.Play("Fire");
 
+    }
+
+    public void dieAnimation()
+    {
+        agent.isStopped = true;
+        isSleeping = true;
+        animator.Play("assault_death_C");
     }
 
     public void OnDrawGizmos()
