@@ -19,5 +19,7 @@ public class WinCanvas : MonoBehaviour
 
     public void WinScene(){
         animator.SetTrigger("Win");
+        Managers.Audio.Play("enemyKnife");
+
     }
 }
