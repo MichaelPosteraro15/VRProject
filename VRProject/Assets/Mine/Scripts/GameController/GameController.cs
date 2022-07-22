@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject hud;
-    
+    public FPSInput player;
     //Variabili per capire se i due obiettivi sono stati raggiunti.
     private bool goal1 = false;
     private bool goal2 = false;
@@ -57,7 +57,8 @@ public class GameController : MonoBehaviour
 
     //Setto gameOver a true se ho perso
     public void GameOver(){
-        gameOver = true; 
+        gameOver = true;
+        player.enabled = false;
         hud.GetComponent<HUD>().OpenGameOverCanvas();
     }
 

@@ -21,11 +21,13 @@ public class EnemyMovement : MonoBehaviour
     private int destPoint = 0;
     public float radius;
     private float TimePassed;
-    private bool shooting;
+    private EnemyDevice _device;
+    public Transform door;
+
     // Start is called before the first frame update
     void Start()
     {
-        shooting = false;
+        _device = GetComponent<EnemyDevice>();
         TimePassed = 0f;
         animator = GetComponent<Animator>();
         alert = false;
@@ -48,7 +50,11 @@ public class EnemyMovement : MonoBehaviour
         TimePassed += Time.deltaTime;
         animator.SetFloat("minSpeed", agent.velocity.magnitude);
         animator.SetBool("Alert", alert);
-        if (!alarm)
+        if (_device.isBroken())
+        {
+            agent.SetDestination(door.position);
+        }
+        else if (!alarm)
         {
             if (!alert)
             {
@@ -70,17 +76,13 @@ public class EnemyMovement : MonoBehaviour
                     }
                     else
                     {
-                        shooting = false;
-                        animator.SetBool("Shoot", shooting);
-                        agent.SetDestination(player.position);
+                      agent.SetDestination(player.position);
                     }
 
 
                 }
                 else
                 {
-                    shooting = false;
-                    animator.SetBool("Shoot", shooting);
                     alarm = true;
                     Debug.Log("SEI SCAPPATO");  //se il player è troppo lontano si considera scappato
                     agent.SetDestination(alarmButton.position);
@@ -91,22 +93,26 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            shooting = false;
-            animator.SetBool("Shoot", shooting);
             agent.SetDestination(alarmButton.position);
         }
 
 
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "ExitDoor")
+        {
+            if (_device.isBroken())
+            { Destroy(this.gameObject); }
+        }
+    }
     private void shoot()
     {
-        shooting = true;
-        
-        animator.SetBool("Shooting", shooting);
         _bullet = Instantiate(_bulletPrefab) as GameObject;
         _bullet.transform.position = transform.TransformPoint(0,1,1);
         _bullet.transform.rotation = transform.rotation;
+        AudioManager.instance.Play("Fire");
 
     }
 
@@ -177,10 +183,6 @@ public class EnemyMovement : MonoBehaviour
         if (alert) { agent.speed = agent.speed * 2; }
     }
 
-    public bool isShooting()
-    {
-        return shooting;
-    }
-
+    
 
 }

@@ -87,4 +87,9 @@ public class EnemyDevice : MonoBehaviour
             isTriggered = false;
         }
     }
+
+    public bool isBroken()
+    {
+        return broken;
+    }
 }
