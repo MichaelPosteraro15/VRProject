@@ -547,6 +547,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408403003881736689, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_Name
+      value: PopupComputerTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 408403003881736689, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408403004544390632, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_Name
+      value: PopupCamTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 408403004544390632, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408403004817964088, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1624736889146495031, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -635,9 +655,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1624736889864476447, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_Text
+      value: '1) Click the enemy you want to hack and hold the left button for 20
+        seconds (watch the timer on the laptop screen).
+
+        2) After that the
+        enemy will left the level.'
+      objectReference: {fileID: 0}
     - target: {fileID: 1624736889984704059, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ClosePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624736890201680369, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}
+      propertyPath: m_Text
+      value: '1) Click the device you want to hack and press the left mouse button
+        for 5 seconds.
+
+        2) Watch the laptop screen and press space af fast
+        as you can until the timer reach the 10 seconds.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab7fed59b9a61147ab6cfa0142efdb2, type: 3}

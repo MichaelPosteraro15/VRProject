@@ -46,7 +46,7 @@ public class EnemyDevice : MonoBehaviour
                 timerLabel.text = string.Format ("{0:00}", 0);
             }
 
-            if(seconds > 10){
+            if(seconds > 7){
                 time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
                 startTime = -1;
                 phaseLabel.text = "COMPLETE";
