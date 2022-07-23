@@ -12,7 +12,7 @@ public class SimpleShoot : Weapon
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
 
-    public int maxAmmo = 20;
+    public int maxAmmo = 30;
     public int currentAmmo=CurrentItem.Instance.getNumbullets();
 
 

@@ -45,6 +45,12 @@ public class GameController : MonoBehaviour
         gameOver = false;
         goal1 = false;
         goal2 = false;
+
+        //quando si restarta le armi aquisite durante il gioco non saranno più disponibili
+        CurrentItem.Instance.setIsCrow(false);
+        CurrentItem.Instance.setIsGun(false);
+        CurrentItem.Instance.setNumbullets(0);
+
     }
 
     public void QuitGame(){
@@ -60,6 +66,15 @@ public class GameController : MonoBehaviour
         gameOver = true;
         player.enabled = false;
         hud.GetComponent<HUD>().OpenGameOverCanvas();
+
+        //se il personaggio si trova al livello 2 ed è morto allora perderà le armi aquisite
+        if (level == 2)
+        {
+            CurrentItem.Instance.setIsCrow(false);
+            CurrentItem.Instance.setIsGun(false);
+            CurrentItem.Instance.setNumbullets(0);
+
+        }
     }
 
     public void Restart(){
