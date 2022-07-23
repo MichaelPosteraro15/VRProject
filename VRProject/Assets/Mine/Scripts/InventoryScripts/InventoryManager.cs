@@ -49,11 +49,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
             CurrentItem.Instance.setIsGun(true);
 
         }
-        else if (name == "bullets")
-        {
-            CurrentItem.Instance.setNumbullets(20);
-
-        }
+       
 
 
 

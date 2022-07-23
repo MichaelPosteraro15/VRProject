@@ -34,13 +34,15 @@ public class SimpleShoot : Weapon
 
     void Start()
     {
+        Debug.Log("START "+CurrentItem.Instance.getNumbullets());
+
         distance = 25;//distanza da cui puo colpire
         damage = WeaponsDamage.GUN;
         impact = 150;
         distance = 25;//distanza da cui puo colpire
 
         //numero di proiettili  con cui partire
-        currentAmmo = maxAmmo;
+        currentAmmo = CurrentItem.Instance.getNumbullets();
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -50,11 +52,12 @@ public class SimpleShoot : Weapon
 
     void Update()
     {
+        Debug.Log(CurrentItem.Instance.getNumbullets());
+
         if (GameEvent.isPaused)
             return;
 
         animator.SetBool("GunShoot", false);
-
 
         //tasto 1 mouse
         //If you want a different input, change it here
@@ -78,9 +81,13 @@ public class SimpleShoot : Weapon
         //se nell'inventario sono presenti i proiettili allora la pistola si ricarica
         if (Managers.Inventory.GetItemCount("bullets") != 0)
         {
+            Debug.Log("AGGIORNA BULLETS");
             rechargeAmmo();
             AudioManager.instance.Play("reloadGun");
             Managers.Inventory.ConsumeItem("bullets");
+            CurrentItem.Instance.setNumbullets(20);
+
+            
         }
     }
 
