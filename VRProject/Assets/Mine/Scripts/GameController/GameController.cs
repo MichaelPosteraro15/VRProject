@@ -40,6 +40,9 @@ public class GameController : MonoBehaviour
 
     public void StartGame(){
         GameEvent.isPaused = false;
+        level = 1;
+        goal1 = false;
+        goal2 = false;
         SceneManager.LoadScene(1);
 
         gameOver = false;
