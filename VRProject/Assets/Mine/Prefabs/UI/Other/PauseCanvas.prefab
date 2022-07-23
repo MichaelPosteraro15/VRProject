@@ -217,10 +217,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Destory corp data in the server room.
+  m_Text: '1) Steals corp data in the server room.
 
-    2) Steals sensible data
-    from the last floor computer.'
+    2) Steals sensible data from
+    the last floor computer. Remember that you can leave the room only if you have
+    had already stole data in the server room.
+
+    3) Click the exit door to proceed
+    through the next level.'
 --- !u!1 &1624736888527582067
 GameObject:
   m_ObjectHideFlags: 0
