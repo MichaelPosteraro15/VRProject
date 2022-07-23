@@ -13,7 +13,7 @@ public class SimpleShoot : Weapon
     public GameObject muzzleFlashPrefab;
 
     public int maxAmmo = 20;
-    public int currentAmmo;
+    public int currentAmmo=CurrentItem.Instance.getNumbullets();
 
 
 
@@ -132,12 +132,17 @@ public class SimpleShoot : Weapon
     private void updateAmmo()
     {
         currentAmmo--;
+        CurrentItem.Instance.setNumbullets(currentAmmo);
+
+
     }
 
     //ricarico
     private void rechargeAmmo()
     {
         currentAmmo = maxAmmo;
+        CurrentItem.Instance.setNumbullets(maxAmmo);
+
     }
 
 

@@ -33,7 +33,7 @@ public class RayShooter : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
                 currentObject = hit.transform.gameObject;
-                Debug.Log(currentObject);
+                Debug.Log(currentObject);   
             }
         }
     }
