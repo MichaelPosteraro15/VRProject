@@ -9,7 +9,7 @@ public class Empty : Weapon
 
     void Start()
     {
-        distance = 1;
+        distance = 1.5f;
         impact = 60;
         damage = WeaponsDamage.PUNCH;
     }
@@ -47,7 +47,9 @@ public class Empty : Weapon
             GameObject hitObject = hit.transform.gameObject; //oggetto colpito
             ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
             if (target != null)
-            { target.react(damage); }
+            { target.react(damage);
+                Managers.Audio.Play("enemyPunch");
+            }
 
 
         }

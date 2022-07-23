@@ -49,90 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicMixer: {fileID: -8240810800186854478, guid: c25e11c967cd94e4dbfc20c0c1187077, type: 2}
---- !u!114 &1624736890411183361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403003881736689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736890474278878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004168815374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736889840571819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004172784280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736888873860263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004328232169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736890332991602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004409062753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736889119156713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004544390632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1624736889083055710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408403004817964088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1624736888471913639
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,10 +217,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Destory corp data in the server room.
+  m_Text: '1) Steals corp data in the server room.
 
-    2) Steals sensible data
-    from the last floor computer.'
+    2) Steals sensible data from
+    the last floor computer. Remember that you can leave the room only if you have
+    had already stole data in the server room.
+
+    3) Click the exit door to proceed
+    through the next level.'
 --- !u!1 &1624736888527582067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,8 +1565,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Click the device you want to hack and press the right mouse button
-    for 5 seconds.
+  m_Text: '1) Click the device you want to hack and press the left mouse button for
+    5 seconds.
 
     2) Wait for 20 seconds (time needed to hack a device).
 
@@ -4252,7 +4172,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Click the enemy you want to hack and hold the right button for 20 seconds
+  m_Text: '1) Click the enemy you want to hack and hold the left button for 20 seconds
     (watch the timer on the laptop screen).
 
     2) After that the enemy will left
@@ -4649,7 +4569,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1624736889119156713}
+      - m_Target: {fileID: 1624736890411183361}
         m_TargetAssemblyTypeName: Popup, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 1
@@ -4994,7 +4914,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1624736890411183361}
+      - m_Target: {fileID: 1624736889119156713}
         m_TargetAssemblyTypeName: Popup, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 1
@@ -5802,11 +5722,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Click the device you want to hack and press the right mouse button
-    for 5 seconds.
+  m_Text: '1) Click the device you want to hack and press the left mouse button for
+    5 seconds.
 
-    2) Watch the laptop screen and press space af fast as you
-    can until the timer reach the 10 seconds.'
+    2) Watch the laptop screen and press space af fast as you can
+    until the timer reach the 10 seconds.'
 --- !u!1 &1624736890243155029
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,16 +7024,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0a632ce2d357944880818117a419bd, type: 3}
---- !u!1 &408403004328232169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
-  m_PrefabInstance: {fileID: 1624736888458540688}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &408403004328232168 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736888458540688}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &408403004328232169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+  m_PrefabInstance: {fileID: 1624736888458540688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736888873860263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004328232169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736888567624055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7237,6 +7169,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736888567624055}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736890474278878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004168815374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736888572043489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7342,16 +7286,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0a632ce2d357944880818117a419bd, type: 3}
---- !u!1 &408403004172784280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
-  m_PrefabInstance: {fileID: 1624736888572043489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &408403004172784281 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736888572043489}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &408403004172784280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+  m_PrefabInstance: {fileID: 1624736888572043489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736889840571819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004172784280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736888956287880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7457,7 +7413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_Name
-      value: PopupCamTutorial
+      value: PopupComputerTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_IsActive
@@ -7475,6 +7431,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736888956287880}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736890411183361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403003881736689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736889083055681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7588,16 +7556,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0a632ce2d357944880818117a419bd, type: 3}
---- !u!224 &408403004817964089 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
-  m_PrefabInstance: {fileID: 1624736889083055681}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &408403004817964088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736889083055681}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &408403004817964089 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+  m_PrefabInstance: {fileID: 1624736889083055681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736889083055710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004817964088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736889350563729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7703,7 +7683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_Name
-      value: PopupComputerTutorial
+      value: PopupCamTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
       propertyPath: m_IsActive
@@ -7721,6 +7701,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736889350563729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736889119156713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004544390632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1624736889483663128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7822,13 +7814,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0a632ce2d357944880818117a419bd, type: 3}
---- !u!224 &408403004409062752 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
-  m_PrefabInstance: {fileID: 1624736889483663128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &408403004409062753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1380012204654637689, guid: fb0a632ce2d357944880818117a419bd, type: 3}
   m_PrefabInstance: {fileID: 1624736889483663128}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &408403004409062752 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1380012204654637688, guid: fb0a632ce2d357944880818117a419bd, type: 3}
+  m_PrefabInstance: {fileID: 1624736889483663128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624736890332991602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408403004409062753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d893e9abf625242b8e874d2a57ab73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

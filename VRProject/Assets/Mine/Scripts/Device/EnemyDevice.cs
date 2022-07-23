@@ -34,16 +34,6 @@ public class EnemyDevice : MonoBehaviour
         time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0;
         seconds = time % 60;
 
-        /*
-        if(Input.GetMouseButtonDown(0) && isTriggered == true){
-            isClicked = true;
-            deviceLabel.text = device;
-            phaseLabel.text = "Connection....";
-            phaseLabel.color = Color.red;
-            Debug.Log("FUNZIONA");
-        }
-        */
-
         if(isClicked == true){
             timerLabel.text = string.Format ("{0:00}", seconds);
             if (Input.GetMouseButtonDown(0)){
@@ -56,7 +46,7 @@ public class EnemyDevice : MonoBehaviour
                 timerLabel.text = string.Format ("{0:00}", 0);
             }
 
-            if(seconds > 10){
+            if(seconds > 7){
                 time = startTime >= 0 ? UnityEngine.Time.time - startTime : 0; 
                 startTime = -1;
                 phaseLabel.text = "COMPLETE";
@@ -68,7 +58,7 @@ public class EnemyDevice : MonoBehaviour
     }
 
     void OnMouseDown(){
-        if(isTriggered == true){
+        if(isTriggered == true && CurrentItem.Instance.getCurrentItem() == "Pc"){
             isClicked = true;
             deviceLabel.text = device;
             phaseLabel.text = "Connection....";

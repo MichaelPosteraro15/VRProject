@@ -12,8 +12,8 @@ public class SimpleShoot : Weapon
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
 
-    public int maxAmmo = 20;
-    public int currentAmmo;
+    public int maxAmmo = 30;
+    public int currentAmmo=CurrentItem.Instance.getNumbullets();
 
 
 
@@ -34,13 +34,15 @@ public class SimpleShoot : Weapon
 
     void Start()
     {
+        Debug.Log("START "+CurrentItem.Instance.getNumbullets());
+
         distance = 25;//distanza da cui puo colpire
         damage = WeaponsDamage.GUN;
         impact = 150;
         distance = 25;//distanza da cui puo colpire
 
         //numero di proiettili  con cui partire
-        currentAmmo = maxAmmo;
+        currentAmmo = CurrentItem.Instance.getNumbullets();
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -50,11 +52,12 @@ public class SimpleShoot : Weapon
 
     void Update()
     {
+        Debug.Log(CurrentItem.Instance.getNumbullets());
+
         if (GameEvent.isPaused)
             return;
 
         animator.SetBool("GunShoot", false);
-
 
         //tasto 1 mouse
         //If you want a different input, change it here
@@ -78,9 +81,13 @@ public class SimpleShoot : Weapon
         //se nell'inventario sono presenti i proiettili allora la pistola si ricarica
         if (Managers.Inventory.GetItemCount("bullets") != 0)
         {
+            Debug.Log("AGGIORNA BULLETS");
             rechargeAmmo();
             AudioManager.instance.Play("reloadGun");
             Managers.Inventory.ConsumeItem("bullets");
+            CurrentItem.Instance.setNumbullets(20);
+
+            
         }
     }
 
@@ -110,15 +117,21 @@ public class SimpleShoot : Weapon
 
             ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
             if (target!=null)
-            { target.react(WeaponsDamage.GUN); }
+            { target.react(WeaponsDamage.GUN);
+               Managers.Audio.Play("enemyHit");
+            }
 
-            //effetto del proiettile  su ciò che è stato colpito
-            Quaternion impactR = Quaternion.LookRotation(hit.normal);
-            GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
-            
-            //mettiamo come genitore l'oggetto colpito
-            _impact.transform.parent = hit.transform;
-            Destroy(_impact, 4);
+            if (target == null)
+            {
+
+                //effetto del proiettile  su ciò che è stato colpito
+                Quaternion impactR = Quaternion.LookRotation(hit.normal);
+                GameObject _impact = Instantiate(impactEffect, hit.point, impactR);
+
+                //mettiamo come genitore l'oggetto colpito
+                _impact.transform.parent = hit.transform;
+                Destroy(_impact, 4);
+            }
         }
     }
 
@@ -126,12 +139,17 @@ public class SimpleShoot : Weapon
     private void updateAmmo()
     {
         currentAmmo--;
+        CurrentItem.Instance.setNumbullets(currentAmmo);
+
+
     }
 
     //ricarico
     private void rechargeAmmo()
     {
         currentAmmo = maxAmmo;
+        CurrentItem.Instance.setNumbullets(maxAmmo);
+
     }
 
 

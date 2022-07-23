@@ -38,6 +38,21 @@ public class InventoryManager : MonoBehaviour, IGameManager
         {   //se non è presente lo inseriamo e poniamo la sua quantita =1
             _items[name] = 1;
         }
+
+        if (name == "crowbar")
+        {
+            CurrentItem.Instance.setIsCrow(true);
+
+        }
+        else if (name == "gun")
+        {
+            CurrentItem.Instance.setIsGun(true);
+
+        }
+       
+
+
+
         DisplayItems();
     }
 

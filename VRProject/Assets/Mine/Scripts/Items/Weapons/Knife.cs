@@ -49,7 +49,9 @@ public class Knife : Weapon
             GameObject hitObject = hit.transform.gameObject; //oggetto colpito
             ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
             if (target != null)
-            { target.react(damage); }
+            { target.react(damage);
+               Managers.Audio.Play("enemyKnife");
+            }
 
 
         }

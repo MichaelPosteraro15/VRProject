@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7665128132322502279}
   - component: {fileID: 423498282032067346}
+  - component: {fileID: 370828537483401713}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -173,4 +174,179 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
+    source: {fileID: 0}
+--- !u!114 &370828537483401713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640997452089813597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873e240fe778f524ebd49c7a07622b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: -8240810800186854478, guid: c25e11c967cd94e4dbfc20c0c1187077, type: 2}
+  effectsMixer: {fileID: 7460938305529164295, guid: c25e11c967cd94e4dbfc20c0c1187077, type: 2}
+  sounds:
+  - type: 1
+    name: Fire
+    clip: {fileID: 8300000, guid: e2280e3a0025e0341b7e5063d3e31952, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: knife
+    clip: {fileID: 8300000, guid: b86a35cf62d8db9408eb4b25e17cb675, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: gas leak
+    clip: {fileID: 8300000, guid: ad464c7f7cff3ba4c8ca46febe8c929d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: airHit
+    clip: {fileID: 8300000, guid: 9f25eab950e5c1d4283d7fa0972c09ad, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: crowbarShoot
+    clip: {fileID: 8300000, guid: 71e31c278b7f11a4daba4f20be066519, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: walk
+    clip: {fileID: 8300000, guid: 5953fec29a027f6468e4bbbf3a825aff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: alarm1
+    clip: {fileID: 8300000, guid: 6f039d1622e607c429c0d92e3620d782, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: alarm2
+    clip: {fileID: 8300000, guid: 2dbb8e632f2037e41856664282adad7b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: reloadGun
+    clip: {fileID: 8300000, guid: 847cf1e0cb42f444694a4366a45cf68d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: footsteps
+    clip: {fileID: 8300000, guid: 9e675d9857e9e3647baaa4abd67f45a3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: footsteps2
+    clip: {fileID: 8300000, guid: a97f5e0036d403b42bfb719f5c20b284, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: footsteps3
+    clip: {fileID: 8300000, guid: d75b3aa55e61f224d86718e48043f3aa, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: footstepsx1
+    clip: {fileID: 8300000, guid: 3548434a0147e5648847f3c57f6b40a9, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: gameMusic
+    clip: {fileID: 8300000, guid: 271b4b154dcf2a34299c65fbc21f2202, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - type: 0
+    name: menuMusic2
+    clip: {fileID: 8300000, guid: b5398e69c955d7b448cc502334d82cd1, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - type: 1
+    name: alert
+    clip: {fileID: 8300000, guid: 5db1052327b4ed3458d194a803bc0ce3, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: enemyHit
+    clip: {fileID: 8300000, guid: 391f772aa453e8948a3be6f782fadac8, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: enemyKnife
+    clip: {fileID: 8300000, guid: 369595a0cee0dde4582acde75e4fc3d2, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 1
+    name: enemyPunch
+    clip: {fileID: 8300000, guid: a03670f1c70c2bf4aaf1c37d5a21e56d, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - type: 0
+    name: homeMusic
+    clip: {fileID: 8300000, guid: e16d00148d178c748ad4d98edc92c59a, type: 3}
+    volume: 0.509
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
     source: {fileID: 0}

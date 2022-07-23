@@ -41,10 +41,14 @@ public class Crowbar : Weapon
             GameObject hitObject = hit.transform.gameObject; //oggetto colpito
             ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
             if (target != null)
-            { target.react(damage); }
+            { 
+               target.react(damage);
+               Managers.Audio.Play("enemyKnife");
+
+            }
 
             //se ho colpito un oggetto che ha un rigidbody 
-            if (hit.rigidbody != null)
+            if (hit.rigidbody != null && target == null)
             {
                 //parte suono
                 AudioManager.instance.Play("crowbarShoot");

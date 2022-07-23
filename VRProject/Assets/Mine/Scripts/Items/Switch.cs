@@ -18,6 +18,8 @@ public class Switch : MonoBehaviour
     private bool lowL = false;
     private bool _showPc = false;
 
+     
+
 
     public int numOb;
     // Start is called before the first frame update
@@ -101,11 +103,18 @@ public class Switch : MonoBehaviour
     //metodo che "prende" l'oggetto(ovvero rende non attivi tutti tranne quello selezionato)
     private void SelectObject()
     {
+
+        Debug.Log("BOOOOL:"+CurrentItem.Instance.isCrow());
+
         //prendo il nome dell'oggetto che possiede in mano attualmente
         string obName = transform.GetChild(selectOb).gameObject.name;
 
-        /* SE GLI OGGETTI NON SONO NELL'INVENTARIO ALLORA NON SARANNO DISPONIBILI
-        if (obName == "Gun" && Managers.Inventory.GetItemCount("gun") == 0)
+        
+
+
+
+        // SE GLI OGGETTI NON SONO NELL'INVENTARIO ALLORA NON SARANNO DISPONIBILI
+        if (obName == "Gun" && !CurrentItem.Instance.isgunOk())
         {
             if (less)
             {
@@ -125,10 +134,12 @@ public class Switch : MonoBehaviour
             }
                
         }
-        
+     
 
-        if (obName == "crowbar" && Managers.Inventory.GetItemCount("crowbar") == 0)
+
+        if (obName == "crowbar" && !CurrentItem.Instance.isCrow())
         {
+
             if (less)
             {
                 selectOb--;
@@ -147,12 +158,13 @@ public class Switch : MonoBehaviour
             }
 
         }
-
-        */
-
+       
 
 
-         obName = transform.GetChild(selectOb).gameObject.name;
+
+
+
+        obName = transform.GetChild(selectOb).gameObject.name;
 
         //parte animazine di cambio oggetto
         animator.Play("SwitchObject");
